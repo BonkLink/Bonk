@@ -6,3 +6,6 @@
 //
 
 import Foundation
+
+var this = 2
+
