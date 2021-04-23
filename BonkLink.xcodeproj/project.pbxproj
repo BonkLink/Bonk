@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E057CBE263364FF0088C79F /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E057CBA263364FF0088C79F /* Member.swift */; };
+		9E057CBF263364FF0088C79F /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E057CBB263364FF0088C79F /* Conversation.swift */; };
+		9E057CC0263364FF0088C79F /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E057CBC263364FF0088C79F /* ChatMessage.swift */; };
+		9E057CC1263364FF0088C79F /* Chatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E057CBD263364FF0088C79F /* Chatter.swift */; };
+		9E057CCB263365720088C79F /* ConversationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E057CCA263365720088C79F /* ConversationListView.swift */; };
+		9E057CCE2633657C0088C79F /* ChatRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E057CCD2633657C0088C79F /* ChatRoomView.swift */; };
+		9E057CD1263365820088C79F /* ChatRoomBubblesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E057CD0263365820088C79F /* ChatRoomBubblesView.swift */; };
+		9E057CD4263365870088C79F /* ChatInputBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E057CD3263365870088C79F /* ChatInputBox.swift */; };
+		9E057CD72633658C0088C79F /* ChatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E057CD62633658C0088C79F /* ChatBubbleView.swift */; };
+		9E057CDA263365900088C79F /* AuthorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E057CD9263365900088C79F /* AuthorView.swift */; };
 		9E1EE8B0262E73E800FBF645 /* SingletonVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1EE8AF262E73E800FBF645 /* SingletonVM.swift */; };
 		9E38140926265D0600DBE310 /* BonkLinkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E38140826265D0600DBE310 /* BonkLinkApp.swift */; };
 		9E38140B26265D0600DBE310 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E38140A26265D0600DBE310 /* ContentView.swift */; };
@@ -19,7 +29,6 @@
 		9E3814262626931700DBE310 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3814252626931700DBE310 /* Preferences.swift */; };
 		9E3814292626934300DBE310 /* UserPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3814282626934300DBE310 /* UserPhoto.swift */; };
 		9E38142F2626D46600DBE310 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E38142E2626D46600DBE310 /* Login.swift */; };
-		9EC68E282630C07500505698 /* testPush.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC68E272630C07500505698 /* testPush.swift */; };
 		BF6536A3262CF01F0054E29F /* LogoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6536A2262CF01F0054E29F /* LogoutButton.swift */; };
 		BF6536A6262CF0470054E29F /* UserAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6536A5262CF0470054E29F /* UserAvatarView.swift */; };
 		BF6536A9262CF0670054E29F /* UserProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6536A8262CF0670054E29F /* UserProfileButton.swift */; };
@@ -40,6 +49,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E057CBA263364FF0088C79F /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Member.swift; path = "../../../../Downloads/BonkLink-BrentModelsBranch/BonkLink/Models/Member.swift"; sourceTree = "<group>"; };
+		9E057CBB263364FF0088C79F /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Conversation.swift; path = "../../../../Downloads/BonkLink-BrentModelsBranch/BonkLink/Models/Conversation.swift"; sourceTree = "<group>"; };
+		9E057CBC263364FF0088C79F /* ChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatMessage.swift; path = "../../../../Downloads/BonkLink-BrentModelsBranch/BonkLink/Models/ChatMessage.swift"; sourceTree = "<group>"; };
+		9E057CBD263364FF0088C79F /* Chatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Chatter.swift; path = "../../../../Downloads/BonkLink-BrentModelsBranch/BonkLink/Models/Chatter.swift"; sourceTree = "<group>"; };
+		9E057CCA263365720088C79F /* ConversationListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConversationListView.swift; path = "../../../../Downloads/BonkLink-BrentModelsBranch/BonkLink/Views/ConversationListView.swift"; sourceTree = "<group>"; };
+		9E057CCD2633657C0088C79F /* ChatRoomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatRoomView.swift; path = "../../../../Downloads/BonkLink-BrentModelsBranch/BonkLink/Views/ChatRoomView.swift"; sourceTree = "<group>"; };
+		9E057CD0263365820088C79F /* ChatRoomBubblesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatRoomBubblesView.swift; path = "../../../../Downloads/BonkLink-BrentModelsBranch/BonkLink/Views/ChatRoomBubblesView.swift"; sourceTree = "<group>"; };
+		9E057CD3263365870088C79F /* ChatInputBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatInputBox.swift; path = "../../../../Downloads/BonkLink-BrentModelsBranch/BonkLink/Views/ChatInputBox.swift"; sourceTree = "<group>"; };
+		9E057CD62633658C0088C79F /* ChatBubbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatBubbleView.swift; path = "../../../../Downloads/BonkLink-BrentModelsBranch/BonkLink/Views/ChatBubbleView.swift"; sourceTree = "<group>"; };
+		9E057CD9263365900088C79F /* AuthorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthorView.swift; path = "../../../../Downloads/BonkLink-BrentModelsBranch/BonkLink/Views/AuthorView.swift"; sourceTree = "<group>"; };
 		9E1EE8AF262E73E800FBF645 /* SingletonVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonVM.swift; sourceTree = "<group>"; };
 		9E38140526265D0600DBE310 /* BonkLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BonkLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E38140826265D0600DBE310 /* BonkLinkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonkLinkApp.swift; sourceTree = "<group>"; };
@@ -52,7 +71,6 @@
 		9E3814252626931700DBE310 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		9E3814282626934300DBE310 /* UserPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPhoto.swift; sourceTree = "<group>"; };
 		9E38142E2626D46600DBE310 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
-		9EC68E272630C07500505698 /* testPush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testPush.swift; sourceTree = "<group>"; };
 		BF6536A2262CF01F0054E29F /* LogoutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutButton.swift; sourceTree = "<group>"; };
 		BF6536A5262CF0470054E29F /* UserAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAvatarView.swift; sourceTree = "<group>"; };
 		BF6536A8262CF0670054E29F /* UserProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileButton.swift; sourceTree = "<group>"; };
@@ -130,9 +148,14 @@
 		9E38142B2626D2BD00DBE310 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9E057CD9263365900088C79F /* AuthorView.swift */,
+				9E057CD62633658C0088C79F /* ChatBubbleView.swift */,
+				9E057CD3263365870088C79F /* ChatInputBox.swift */,
+				9E057CD0263365820088C79F /* ChatRoomBubblesView.swift */,
+				9E057CCD2633657C0088C79F /* ChatRoomView.swift */,
+				9E057CCA263365720088C79F /* ConversationListView.swift */,
 				BF65369C262CEB490054E29F /* User & Profle Shit */,
 				9E38140A26265D0600DBE310 /* ContentView.swift */,
-				9EC68E272630C07500505698 /* testPush.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -140,6 +163,10 @@
 		9E38142C2626D2CE00DBE310 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9E057CBC263364FF0088C79F /* ChatMessage.swift */,
+				9E057CBD263364FF0088C79F /* Chatter.swift */,
+				9E057CBB263364FF0088C79F /* Conversation.swift */,
+				9E057CBA263364FF0088C79F /* Member.swift */,
 				9E3814282626934300DBE310 /* UserPhoto.swift */,
 				9E38142126267BB200DBE310 /* Users.swift */,
 				9E3814252626931700DBE310 /* Preferences.swift */,
@@ -280,12 +307,18 @@
 				BF65370E262D16760054E29F /* CallToActionButton.swift in Sources */,
 				BF6536A9262CF0670054E29F /* UserProfileButton.swift in Sources */,
 				9E38142F2626D46600DBE310 /* Login.swift in Sources */,
-				9EC68E282630C07500505698 /* testPush.swift in Sources */,
+				9E057CBF263364FF0088C79F /* Conversation.swift in Sources */,
+				9E057CCE2633657C0088C79F /* ChatRoomView.swift in Sources */,
+				9E057CBE263364FF0088C79F /* Member.swift in Sources */,
+				9E057CD72633658C0088C79F /* ChatBubbleView.swift in Sources */,
+				9E057CCB263365720088C79F /* ConversationListView.swift in Sources */,
 				9E38142226267BB200DBE310 /* Users.swift in Sources */,
 				BF6536F9262D139C0054E29F /* PhotoCaptureController.swift in Sources */,
 				BF6536AC262CF0970054E29F /* OnlineAlertSettings.swift in Sources */,
 				9E38141F262664F500DBE310 /* AppState.swift in Sources */,
+				9E057CD1263365820088C79F /* ChatRoomBubblesView.swift in Sources */,
 				BF653720262D1B610054E29F /* SampleData.swift in Sources */,
+				9E057CC1263364FF0088C79F /* Chatter.swift in Sources */,
 				BF653717262D188A0054E29F /* LocationHelper.swift in Sources */,
 				BF6536F5262D120F0054E29F /* PreviewHelpers.swift in Sources */,
 				BF6536A3262CF01F0054E29F /* LogoutButton.swift in Sources */,
@@ -295,10 +328,13 @@
 				9E38140926265D0600DBE310 /* BonkLinkApp.swift in Sources */,
 				BF653714262D17000054E29F /* CaptionLabel.swift in Sources */,
 				BF6536A6262CF0470054E29F /* UserAvatarView.swift in Sources */,
+				9E057CC0263364FF0088C79F /* ChatMessage.swift in Sources */,
 				9E3814292626934300DBE310 /* UserPhoto.swift in Sources */,
 				BF653705262D15CB0054E29F /* AvatarThumbNailView.swift in Sources */,
 				BF6536AF262CF1180054E29F /* SetProfileView.swift in Sources */,
+				9E057CD4263365870088C79F /* ChatInputBox.swift in Sources */,
 				BF653711262D16CA0054E29F /* InputField.swift in Sources */,
+				9E057CDA263365900088C79F /* AuthorView.swift in Sources */,
 				BF65370B262D161A0054E29F /* Thumbnail.swift in Sources */,
 				9E1EE8B0262E73E800FBF645 /* SingletonVM.swift in Sources */,
 				BF6536FD262D14ED0054E29F /* BackButton.swift in Sources */,
