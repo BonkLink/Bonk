@@ -28,6 +28,7 @@
 		9E057D09263373FC0088C79F /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E057D02263373FC0088C79F /* Preferences.swift */; };
 		9E057D0A263373FC0088C79F /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E057D03263373FC0088C79F /* ChatMessage.swift */; };
 		9E057D0B263373FC0088C79F /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E057D04263373FC0088C79F /* Conversation.swift */; };
+		9E057D1226337F8B0088C79F /* tester2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E057D1126337F8B0088C79F /* tester2.swift */; };
 		9E1EE8B0262E73E800FBF645 /* SingletonVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1EE8AF262E73E800FBF645 /* SingletonVM.swift */; };
 		9E38140926265D0600DBE310 /* BonkLinkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E38140826265D0600DBE310 /* BonkLinkApp.swift */; };
 		9E38140D26265D0700DBE310 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E38140C26265D0700DBE310 /* Assets.xcassets */; };
@@ -71,6 +72,7 @@
 		9E057D02263373FC0088C79F /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		9E057D03263373FC0088C79F /* ChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 		9E057D04263373FC0088C79F /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
+		9E057D1126337F8B0088C79F /* tester2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tester2.swift; sourceTree = "<group>"; };
 		9E1EE8AF262E73E800FBF645 /* SingletonVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonVM.swift; sourceTree = "<group>"; };
 		9E38140526265D0600DBE310 /* BonkLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BonkLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E38140826265D0600DBE310 /* BonkLinkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonkLinkApp.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				9E38141126265D0700DBE310 /* Info.plist */,
 				9E38140E26265D0700DBE310 /* Preview Content */,
 				9E1EE8AF262E73E800FBF645 /* SingletonVM.swift */,
+				9E057D1126337F8B0088C79F /* tester2.swift */,
 			);
 			path = BonkLink;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				9E057CF6263373850088C79F /* LogoutButton.swift in Sources */,
 				9E057CF1263373850088C79F /* ChatRoomBubblesView.swift in Sources */,
 				9E057CFA263373850088C79F /* ChatInputBox.swift in Sources */,
+				9E057D1226337F8B0088C79F /* tester2.swift in Sources */,
 				9E057D08263373FC0088C79F /* Photo.swift in Sources */,
 				9E057CFB263373850088C79F /* testPush.swift in Sources */,
 				9E057D07263373FC0088C79F /* Chatter.swift in Sources */,
