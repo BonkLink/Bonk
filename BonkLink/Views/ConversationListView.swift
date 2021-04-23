@@ -1,20 +1,20 @@
 //
-//  UserAvatarView.swift
+//  ConversationListView.swift
 //  BonkLink
 //
-//  Created by Jacques Sarraffe on 4/18/21.
+//  Created by Jessica Wood on 4/19/21.
 //
 
 import SwiftUI
 
-struct UserAvatarView: View {
+struct ConversationListView: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct UserAvatarView_Previews: PreviewProvider {
+struct ConversationListView_Previews: PreviewProvider {
     static var previews: some View {
-        UserAvatarView()
+        ConversationListView()
     }
 }
