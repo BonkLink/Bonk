@@ -27,10 +27,6 @@ extension AppState {
     }
 }
 
-
-
-
-
 extension Photo {
     convenience init(photoName: String) {
         self.init()

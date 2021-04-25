@@ -38,6 +38,13 @@ struct ContentView: View {
                         }
                         else if(currState.user?.isProfileSet == true){
                             Text("Logged in with user profile set")
+                                .environment(\.realmConfiguration, app.currentUser!.configuration(partitionValue: "user=\(currState.user?._id ?? "")"))
+                            .navigationBarTitle("Chats", displayMode: .inline)
+                            .navigationBarItems(
+                                trailing: currState.isUserLoggedIn && !currState.indicateActivity ? UserAvatarView(
+                                    photo: currState.user?.userPreferences?.avatarImage,
+                                    online: true) { showProfile.toggle() } : nil
+                            )
                             LogoutButton();
 
                         }
