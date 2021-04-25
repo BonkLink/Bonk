@@ -37,10 +37,11 @@ struct AvatarThumbNailView: View {
 
 struct AvatarThumbNailView_Previews: PreviewProvider {
     static var previews: some View {
-        AppearancePreviews(
-            AvatarThumbNailView(photo: .sample)
-                .padding()
-                .previewLayout(.sizeThatFits)
-        )
+        Text("Fix this SAMPLE shit")
+//        AppearancePreviews(
+//            AvatarThumbNailView(photo: .sample)
+//                .padding()
+//                .previewLayout(.sizeThatFits)
+//        )
     }
 }

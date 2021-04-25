@@ -33,8 +33,8 @@ struct ThumbNailView_Previews: PreviewProvider {
     static var previews: some View {
         AppearancePreviews(
             Group {
-                ThumbNailView(photo: .sample)
-                ThumbNailView(photo: nil)
+//                ThumbNailView(photo: .sample)
+//                ThumbNailView(photo: nil)
             }
         )
         .padding()

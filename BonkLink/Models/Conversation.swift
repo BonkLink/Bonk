@@ -14,5 +14,5 @@ import RealmSwift
     dynamic var id = UUID().uuidString
     dynamic var displayName = ""
     dynamic var unreadCount = 0
-    //var members = List<Member>() //TODO member.swift
+    var members = List<Member>() //TODO member.swift
 }

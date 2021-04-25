@@ -48,10 +48,12 @@ struct UserAvatarView: View {
 
 struct UserAvatarView_Previews: PreviewProvider {
     static var previews: some View {
-        AppearancePreviews(
-            UserAvatarView(photo: .sample, online: true, action: {})
-        )
-        .padding()
-        .previewLayout(.sizeThatFits)
+        Text("Fix this SAMPLE shit")
+//        AppearancePreviews(
+//            Text("Fix this sample bug")
+//            UserAvatarView(photo: .sample, online: true, action: {})
+//        )
+//        .padding()
+//        .previewLayout(.sizeThatFits)
     }
 }

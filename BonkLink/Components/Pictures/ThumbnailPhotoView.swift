@@ -24,8 +24,9 @@ struct ThumbnailPhotoView: View {
 
 struct ThumbnailPhotoView_Previews: PreviewProvider {
     static var previews: some View {
-        AppearancePreviews(ThumbnailPhotoView(photo: .sample))
-            .previewLayout(.sizeThatFits)
-            .padding()
+        Text("Fix this SAMPLE shit")
+//        AppearancePreviews(ThumbnailPhotoView(photo: .sample))
+//            .previewLayout(.sizeThatFits)
+//            .padding()
     }
 }

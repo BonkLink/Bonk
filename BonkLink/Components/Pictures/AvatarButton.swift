@@ -33,10 +33,12 @@ struct AvatarButton: View {
 
 struct AvatarButton_Previews: PreviewProvider {
     static var previews: some View {
-        AppearancePreviews(
-            AvatarButton(photo: .sample, action: {})
-        )
-        .padding()
-        .previewLayout(.sizeThatFits)
+        Text("Fix this SAMPLE shit")
+//        AppearancePreviews(
+//            AvatarButton(photo: .sample, action: {})
+//        )
+//        .padding()
+//        .previewLayout(.sizeThatFits)
+        
     }
 }

@@ -1,9 +1,3 @@
-//
-//  ContentView.swift
-//  BonkLink
-//
-//  Created by Guy Greenleaf on 4/13/21.
-//
 
 import SwiftUI
 import UserNotifications
@@ -84,7 +78,6 @@ struct ContentView: View {
 
 //addNotification() function
 //clearNotificiation() function
-
 extension View {
     public func currentDeviceNavigationViewStyle(alwaysStacked: Bool) -> AnyView {
         if UIDevice.current.userInterfaceIdiom == .pad && !alwaysStacked {
@@ -101,8 +94,3 @@ struct ContentView_Previews: PreviewProvider {
             
     }
 }
-
-
-
-
-
