@@ -10,7 +10,7 @@ import RealmSwift
 
 struct ChatInputBox: View {
     
-    @EnvironmentObject var state: AppState
+    var state = SingletonVM.sharedInstance.globalViewModel
     @AppStorage("shouldShareLocation") var shouldShareLocation = false
     
     var send: (_: ChatMessage) -> Void = { _ in }
@@ -32,7 +32,32 @@ struct ChatInputBox: View {
     private var isEmpty: Bool { photo == nil && location == [] && chatText == "" }
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            HStack {
+                if let photo = photo {
+                    ThumbnailWithDelete(photo: photo, action: deletePhoto)
+                }
+                if location.count == 2 {
+                    MapThumbnailWithDelete(location: location, action: deleteMap)
+                }
+                TextEditor(text: $chatText)
+                    .onTapGesture(perform: focusAction)
+                    .padding(Dimensions.padding)
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: Dimensions.minHeight, maxHeight: Dimensions.maxHeight)
+                    .background(Color("GreenBackground"))
+                    .clipShape(RoundedRectangle(cornerRadius: Dimensions.radius))
+            }
+            HStack {
+                Spacer()
+                LocationButton(action: addLocation, active: shouldShareLocation && location.count == 0)
+                AttachButton(action: addAttachment, active: photo == nil)
+                CameraButton(action: takePhoto, active: photo == nil)
+                SendButton(action: sendChat, active: !isEmpty)
+            }
+            .frame(height: Dimensions.toolStripHeight)
+        }
+        .padding(Dimensions.padding)
+        .onAppear(perform: { clearBackground() })
     }
     
     private func addLocation() {

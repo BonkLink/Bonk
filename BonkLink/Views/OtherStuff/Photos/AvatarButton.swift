@@ -20,7 +20,7 @@ struct AvatarButton: View {
     var body: some View {
         ZStack {
             Button(action: action) {
-                AvatarThumbNailView(photo: photo)
+                AvatarThumbnailView(photo: photo)
             }
             Image(systemName: "camera.fill")
                 .resizable()

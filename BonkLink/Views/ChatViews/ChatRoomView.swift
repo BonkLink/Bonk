@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ChatRoomView: View {
     
-    @EnvironmentObject var state: AppState
+    var state = SingletonVM.sharedInstance.globalViewModel
     @Environment(\.realm) var userRealm
     var conversation: Conversation?
     var isPreview = false

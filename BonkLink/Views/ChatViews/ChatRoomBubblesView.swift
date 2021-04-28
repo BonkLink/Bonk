@@ -10,7 +10,7 @@ import RealmSwift
 
 struct ChatRoomBubblesView: View {
     
-    @EnvironmentObject var state: AppState
+    var state = SingletonVM.sharedInstance.globalViewModel
     @ObservedResults(ChatMessage.self, sortDescriptor: SortDescriptor(keyPath: "timestamp", ascending: true)) var chats
     
     var conversation: Conversation?

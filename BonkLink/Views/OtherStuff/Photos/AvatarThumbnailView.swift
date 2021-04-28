@@ -1,12 +1,14 @@
 //
-//  AvatarThumbNailView.swift
-//  RChat
+//  AvatarThumbnailView.swift
+//  BonkLink
 //
-//  Created by Andrew Morgan on 24/11/2020.
+//  Created by Jessica Wood on 4/28/21.
 //
+
 import SwiftUI
 
-struct AvatarThumbNailView: View {
+struct AvatarThumbnailView: View {
+    
     let photo: Photo
     var imageSize: CGFloat = 102
 
@@ -15,11 +17,11 @@ struct AvatarThumbNailView: View {
         static let iconPadding: CGFloat = 8
         static let compressionQuality: CGFloat = 0.8
     }
-
+    
     var body: some View {
         VStack {
             if let photo = photo {
-                ThumbNailView(photo: photo)
+                ThumbnailView(photo: photo)
             } else {
                 if let photo = photo.picture {
                     Thumbnail(imageData: photo)
@@ -35,12 +37,8 @@ struct AvatarThumbNailView: View {
     }
 }
 
-struct AvatarThumbNailView_Previews: PreviewProvider {
-    static var previews: some View {
-        AppearancePreviews(
-            AvatarThumbNailView(photo: .sample)
-                .padding()
-                .previewLayout(.sizeThatFits)
-        )
-    }
-}
+//struct AvatarThumbnailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AvatarThumbnailView()
+//    }
+//}

@@ -10,7 +10,7 @@ import RealmSwift
 
 struct SaveConversationButton: View {
     
-    @EnvironmentObject var state: AppState
+    var state = SingletonVM.sharedInstance.globalViewModel
     @Environment(\.realm) var userRealm
     
     let name: String
@@ -18,9 +18,10 @@ struct SaveConversationButton: View {
     var done: () -> Void = { }
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: saveConversation) {
+            Text("Save")
+        }
     }
-    
     private func saveConversation() {
         state.error = nil
         let conversation = Conversation()
@@ -41,7 +42,7 @@ struct SaveConversationButton: View {
             state.indicateActivity = false
             return
         }
-        state.indicateActivity = false 
+        state.indicateActivity = false
         done()
     }
 }

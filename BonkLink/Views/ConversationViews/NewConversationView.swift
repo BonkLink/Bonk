@@ -10,7 +10,7 @@ import RealmSwift
 
 struct NewConversationView: View {
     
-    @EnvironmentObject var state: AppState
+    var state = SingletonVM.sharedInstance.globalViewModel
     @Environment(\.presentationMode) var presentationMode
     @ObservedResults(Chatter.self) var chatters
     

@@ -23,7 +23,46 @@ struct ChatBubbleView: View {
     }
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            if isMyMessage { Spacer().frame(width: Dimensions.horizontalOffset) }
+            VStack {
+                HStack {
+                    if let authorName = authorName {
+                        if isPreview {
+
+                            AuthorView(userName: authorName)
+                        } else {
+                            AuthorView(userName: authorName)
+                                .environment(\.realmConfiguration, app.currentUser!.configuration(partitionValue: "all-users=all-the-users"))
+                        }
+                    }
+                    Spacer()
+                    Text(chatMessage.timestamp, style: isLessThanOneDay ?  .time : .date)
+                        .font(.caption)
+                }
+                HStack {
+                    if let photo = chatMessage.image {
+                        ThumbnailWithExpand(photo: photo)
+                        .padding(Dimensions.padding)
+                    }
+                    if let location = chatMessage.location {
+                        if location.count == 2 {
+                            MapThumbnailWithExpand(location: location.map { $0 })
+                                .padding(Dimensions.padding)
+                        }
+                    }
+                    if chatMessage.text != "" {
+                        Text(chatMessage.text)
+                        .padding(Dimensions.padding)
+                    }
+                    Spacer()
+                }
+            }
+            .padding(Dimensions.padding)
+            .background(Color(isMyMessage ? "MyBubble" : "OtherBubble"))
+            .clipShape(RoundedRectangle(cornerRadius: Dimensions.cornerRadius))
+            if !isMyMessage { Spacer().frame(width: Dimensions.horizontalOffset) }
+        }
     }
 }
 

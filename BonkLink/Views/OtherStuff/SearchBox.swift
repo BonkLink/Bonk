@@ -24,7 +24,27 @@ struct SearchBox: View {
     }
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            HStack {
+                Image(systemName: "magnifyingglass")
+                    .frame(width: Dimensions.glassSize, height: Dimensions.glassSize)
+                TextField(placeholder,
+                          text: $searchText
+                )
+                .disableAutocorrection(true)
+                .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
+                .font(.body)
+            }
+            .padding(EdgeInsets(top: Dimensions.inset, leading: Dimensions.bottomInset, bottom: Dimensions.inset, trailing: Dimensions.inset))
+            .frame(height: Dimensions.heightTextField)
+            .foregroundColor(.secondary)
+            .background(Color(.secondarySystemBackground))
+            .cornerRadius(Dimensions.cornerRadius)
+            .padding([.horizontal, .top], Dimensions.padding)
+            Divider()
+                .padding(.top, Dimensions.topPadding)
+                .frame(height: Dimensions.dividerHeight)
+        }
     }
 }
 

@@ -1,12 +1,14 @@
 //
-//  ThumbNailView.swift
-//  RChat
+//  ThumbnailView.swift
+//  BonkLink
 //
-//  Created by Andrew Morgan on 02/12/2020.
+//  Created by Jessica Wood on 4/28/21.
 //
+
 import SwiftUI
 
-struct ThumbNailView: View {
+struct ThumbnailView: View {
+    
     let photo: Photo?
     private let compressionQuality: CGFloat = 0.8
     
@@ -29,15 +31,8 @@ struct ThumbNailView: View {
     }
 }
 
-struct ThumbNailView_Previews: PreviewProvider {
-    static var previews: some View {
-        AppearancePreviews(
-            Group {
-                ThumbNailView(photo: .sample)
-                ThumbNailView(photo: nil)
-            }
-        )
-        .padding()
-        .previewLayout(.sizeThatFits)
-    }
-}
+//struct ThumbnailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ThumbnailView(photo: <#Photo?#>)
+//    }
+//}

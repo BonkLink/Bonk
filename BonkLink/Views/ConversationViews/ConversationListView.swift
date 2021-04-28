@@ -10,7 +10,7 @@ import RealmSwift
 
 struct ConversationListView: View {
     
-    @EnvironmentObject var state: AppState
+    var state = SingletonVM.sharedInstance.globalViewModel
     @ObservedResults(Users.self) var users
     
     var isPreview = false
