@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F52DE232638AA7E00D94AB8 /* ConversationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52DE222638AA7E00D94AB8 /* ConversationCardView.swift */; };
+		3F52DE262638B1FB00D94AB8 /* NewConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52DE252638B1FB00D94AB8 /* NewConversationView.swift */; };
+		3F52DE292638B65100D94AB8 /* ConversationCardContentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52DE282638B65100D94AB8 /* ConversationCardContentsView.swift */; };
+		3F52DE2C2638BDAF00D94AB8 /* MugShotGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52DE2B2638BDAF00D94AB8 /* MugShotGridView.swift */; };
+		3F52DE2F2638C04700D94AB8 /* SaveConversationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52DE2E2638C04700D94AB8 /* SaveConversationButton.swift */; };
+		3F52DE322638C40700D94AB8 /* SearchBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52DE312638C40700D94AB8 /* SearchBox.swift */; };
 		9E057CEE263373850088C79F /* ChatRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E057CDF263373850088C79F /* ChatRoomView.swift */; };
 		9E057CEF263373850088C79F /* ConversationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E057CE0263373850088C79F /* ConversationListView.swift */; };
 		9E057CF0263373850088C79F /* ChatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E057CE1263373850088C79F /* ChatBubbleView.swift */; };
@@ -54,6 +60,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F52DE222638AA7E00D94AB8 /* ConversationCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCardView.swift; sourceTree = "<group>"; };
+		3F52DE252638B1FB00D94AB8 /* NewConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationView.swift; sourceTree = "<group>"; };
+		3F52DE282638B65100D94AB8 /* ConversationCardContentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCardContentsView.swift; sourceTree = "<group>"; };
+		3F52DE2B2638BDAF00D94AB8 /* MugShotGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MugShotGridView.swift; sourceTree = "<group>"; };
+		3F52DE2E2638C04700D94AB8 /* SaveConversationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveConversationButton.swift; sourceTree = "<group>"; };
+		3F52DE312638C40700D94AB8 /* SearchBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBox.swift; sourceTree = "<group>"; };
 		9E057CDF263373850088C79F /* ChatRoomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomView.swift; sourceTree = "<group>"; };
 		9E057CE0263373850088C79F /* ConversationListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationListView.swift; sourceTree = "<group>"; };
 		9E057CE1263373850088C79F /* ChatBubbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBubbleView.swift; sourceTree = "<group>"; };
@@ -113,6 +125,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F52DE342639D16E00D94AB8 /* ChatViews */ = {
+			isa = PBXGroup;
+			children = (
+				9E057CEB263373850088C79F /* AuthorView.swift */,
+				9E057CDF263373850088C79F /* ChatRoomView.swift */,
+				9E057CE2263373850088C79F /* ChatRoomBubblesView.swift */,
+				9E057CEC263373850088C79F /* ChatInputBox.swift */,
+				9E057CE1263373850088C79F /* ChatBubbleView.swift */,
+			);
+			path = ChatViews;
+			sourceTree = "<group>";
+		};
+		3F52DE352639D1D900D94AB8 /* ConversationViews */ = {
+			isa = PBXGroup;
+			children = (
+				3F52DE2B2638BDAF00D94AB8 /* MugShotGridView.swift */,
+				3F52DE2E2638C04700D94AB8 /* SaveConversationButton.swift */,
+				9E057CE0263373850088C79F /* ConversationListView.swift */,
+				3F52DE282638B65100D94AB8 /* ConversationCardContentsView.swift */,
+				3F52DE252638B1FB00D94AB8 /* NewConversationView.swift */,
+				3F52DE222638AA7E00D94AB8 /* ConversationCardView.swift */,
+			);
+			path = ConversationViews;
+			sourceTree = "<group>";
+		};
+		3F52DE362639D5FB00D94AB8 /* OtherStuff */ = {
+			isa = PBXGroup;
+			children = (
+				3F52DE312638C40700D94AB8 /* SearchBox.swift */,
+			);
+			path = OtherStuff;
+			sourceTree = "<group>";
+		};
 		9E057CE4263373850088C79F /* User & Profle Shit */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,15 +217,12 @@
 		9E38142B2626D2BD00DBE310 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9E057CEB263373850088C79F /* AuthorView.swift */,
-				9E057CE1263373850088C79F /* ChatBubbleView.swift */,
-				9E057CEC263373850088C79F /* ChatInputBox.swift */,
-				9E057CE2263373850088C79F /* ChatRoomBubblesView.swift */,
-				9E057CDF263373850088C79F /* ChatRoomView.swift */,
+				3F52DE342639D16E00D94AB8 /* ChatViews */,
 				9E057CE3263373850088C79F /* ContentView.swift */,
-				9E057CE0263373850088C79F /* ConversationListView.swift */,
+				3F52DE352639D1D900D94AB8 /* ConversationViews */,
 				9E057CED263373850088C79F /* testPush.swift */,
 				9E057CE4263373850088C79F /* User & Profle Shit */,
+				3F52DE362639D5FB00D94AB8 /* OtherStuff */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -329,14 +371,18 @@
 				9E38141F262664F500DBE310 /* AppState.swift in Sources */,
 				9E057CF3263373850088C79F /* SetProfileView.swift in Sources */,
 				BF653720262D1B610054E29F /* SampleData.swift in Sources */,
+				3F52DE232638AA7E00D94AB8 /* ConversationCardView.swift in Sources */,
 				BF653717262D188A0054E29F /* LocationHelper.swift in Sources */,
 				BF6536F5262D120F0054E29F /* PreviewHelpers.swift in Sources */,
 				9E057D0B263373FC0088C79F /* Conversation.swift in Sources */,
 				BF653702262D158F0054E29F /* AvatarButton.swift in Sources */,
 				9E38140926265D0600DBE310 /* BonkLinkApp.swift in Sources */,
+				3F52DE2C2638BDAF00D94AB8 /* MugShotGridView.swift in Sources */,
 				9E057CF2263373850088C79F /* ContentView.swift in Sources */,
+				3F52DE2F2638C04700D94AB8 /* SaveConversationButton.swift in Sources */,
 				BF653714262D17000054E29F /* CaptionLabel.swift in Sources */,
 				9E057CF6263373850088C79F /* LogoutButton.swift in Sources */,
+				3F52DE292638B65100D94AB8 /* ConversationCardContentsView.swift in Sources */,
 				9E057CF1263373850088C79F /* ChatRoomBubblesView.swift in Sources */,
 				9E057CFA263373850088C79F /* ChatInputBox.swift in Sources */,
 				9E057D1226337F8B0088C79F /* tester2.swift in Sources */,
@@ -348,6 +394,7 @@
 				9E057CF5263373850088C79F /* UserAvatarView.swift in Sources */,
 				BFFA49C82635E0A80011A71B /* ThumbnailPhotoView.swift in Sources */,
 				BF653711262D16CA0054E29F /* InputField.swift in Sources */,
+				3F52DE262638B1FB00D94AB8 /* NewConversationView.swift in Sources */,
 				BF65370B262D161A0054E29F /* Thumbnail.swift in Sources */,
 				9E1EE8B0262E73E800FBF645 /* SingletonVM.swift in Sources */,
 				9E057D0A263373FC0088C79F /* ChatMessage.swift in Sources */,
@@ -357,6 +404,7 @@
 				9E057CEE263373850088C79F /* ChatRoomView.swift in Sources */,
 				BFFA49C52635DFF20011A71B /* OnOffCircleView.swift in Sources */,
 				9E057D06263373FC0088C79F /* Users.swift in Sources */,
+				3F52DE322638C40700D94AB8 /* SearchBox.swift in Sources */,
 				9E057CEF263373850088C79F /* ConversationListView.swift in Sources */,
 				BFFA49CC2635E1820011A71B /* BlankPersonIconView.swift in Sources */,
 			);
