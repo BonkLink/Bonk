@@ -29,6 +29,11 @@
 		3F52DE722639F56300D94AB8 /* MapThumbnailWithExpand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52DE712639F56300D94AB8 /* MapThumbnailWithExpand.swift */; };
 		3F52DE752639F69200D94AB8 /* PhotoFullSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52DE742639F69200D94AB8 /* PhotoFullSizeView.swift */; };
 		3F52DE782639FBE000D94AB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F52DE772639FBE000D94AB8 /* LaunchScreen.storyboard */; };
+		3F52DE7C263C6FAE00D94AB8 /* UIImage+Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52DE7B263C6FAE00D94AB8 /* UIImage+Thumbnail.swift */; };
+		3F52DE7F263C704900D94AB8 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52DE7E263C704900D94AB8 /* CheckBox.swift */; };
+		3F52DE82263C70D400D94AB8 /* LabeledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52DE81263C70D400D94AB8 /* LabeledButton.swift */; };
+		3F52DE86263C711900D94AB8 /* LabeledText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52DE85263C711900D94AB8 /* LabeledText.swift */; };
+		3F52DE89263C717800D94AB8 /* OpaqueProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52DE88263C717800D94AB8 /* OpaqueProgressView.swift */; };
 		9E057CEE263373850088C79F /* ChatRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E057CDF263373850088C79F /* ChatRoomView.swift */; };
 		9E057CEF263373850088C79F /* ConversationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E057CE0263373850088C79F /* ConversationListView.swift */; };
 		9E057CF0263373850088C79F /* ChatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E057CE1263373850088C79F /* ChatBubbleView.swift */; };
@@ -95,6 +100,11 @@
 		3F52DE712639F56300D94AB8 /* MapThumbnailWithExpand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapThumbnailWithExpand.swift; sourceTree = "<group>"; };
 		3F52DE742639F69200D94AB8 /* PhotoFullSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFullSizeView.swift; sourceTree = "<group>"; };
 		3F52DE772639FBE000D94AB8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3F52DE7B263C6FAE00D94AB8 /* UIImage+Thumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Thumbnail.swift"; sourceTree = "<group>"; };
+		3F52DE7E263C704900D94AB8 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		3F52DE81263C70D400D94AB8 /* LabeledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledButton.swift; sourceTree = "<group>"; };
+		3F52DE85263C711900D94AB8 /* LabeledText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledText.swift; sourceTree = "<group>"; };
+		3F52DE88263C717800D94AB8 /* OpaqueProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpaqueProgressView.swift; sourceTree = "<group>"; };
 		9E057CDF263373850088C79F /* ChatRoomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomView.swift; sourceTree = "<group>"; };
 		9E057CE0263373850088C79F /* ConversationListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationListView.swift; sourceTree = "<group>"; };
 		9E057CE1263373850088C79F /* ChatBubbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBubbleView.swift; sourceTree = "<group>"; };
@@ -182,8 +192,12 @@
 				BF6536FC262D14ED0054E29F /* BackButton.swift */,
 				BF65370D262D16760054E29F /* CallToActionButton.swift */,
 				BF653713262D17000054E29F /* CaptionLabel.swift */,
+				3F52DE7E263C704900D94AB8 /* CheckBox.swift */,
 				BF653710262D16CA0054E29F /* InputField.swift */,
+				3F52DE81263C70D400D94AB8 /* LabeledButton.swift */,
+				3F52DE85263C711900D94AB8 /* LabeledText.swift */,
 				BFFA49C42635DFF20011A71B /* OnOffCircleView.swift */,
+				3F52DE88263C717800D94AB8 /* OpaqueProgressView.swift */,
 				3F52DE312638C40700D94AB8 /* SearchBox.swift */,
 				9E057CED263373850088C79F /* testPush.swift */,
 				3F52DE442639E2C700D94AB8 /* Photos */,
@@ -219,15 +233,16 @@
 		3F52DE442639E2C700D94AB8 /* Photos */ = {
 			isa = PBXGroup;
 			children = (
-				BFFA49CB2635E1820011A71B /* BlankPersonIconView.swift */,
-				BFFA49C72635E0A80011A71B /* ThumbnailPhotoView.swift */,
 				BF653701262D158F0054E29F /* AvatarButton.swift */,
+				3F52DE6A2639F1CF00D94AB8 /* AvatarThumbnailView.swift */,
+				BFFA49CB2635E1820011A71B /* BlankPersonIconView.swift */,
+				3F52DE742639F69200D94AB8 /* PhotoFullSizeView.swift */,
+				BFFA49C72635E0A80011A71B /* ThumbnailPhotoView.swift */,
 				3F52DE452639E2E600D94AB8 /* ThumbnailWithDelete.swift */,
 				3F52DE492639E33700D94AB8 /* ThumbnailView.swift */,
 				3F52DE4C2639E37800D94AB8 /* Thumbnail.swift */,
 				3F52DE612639E7FC00D94AB8 /* ThumbnailWithExpand.swift */,
-				3F52DE6A2639F1CF00D94AB8 /* AvatarThumbnailView.swift */,
-				3F52DE742639F69200D94AB8 /* PhotoFullSizeView.swift */,
+				3F52DE7B263C6FAE00D94AB8 /* UIImage+Thumbnail.swift */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
@@ -434,6 +449,7 @@
 				3F52DE422639E29400D94AB8 /* DeleteButton.swift in Sources */,
 				3F52DE2C2638BDAF00D94AB8 /* MugShotGridView.swift in Sources */,
 				3F52DE622639E7FC00D94AB8 /* ThumbnailWithExpand.swift in Sources */,
+				3F52DE82263C70D400D94AB8 /* LabeledButton.swift in Sources */,
 				9E057CF2263373850088C79F /* ContentView.swift in Sources */,
 				3F52DE2F2638C04700D94AB8 /* SaveConversationButton.swift in Sources */,
 				BF653714262D17000054E29F /* CaptionLabel.swift in Sources */,
@@ -453,12 +469,16 @@
 				BF653711262D16CA0054E29F /* InputField.swift in Sources */,
 				3F52DE262638B1FB00D94AB8 /* NewConversationView.swift in Sources */,
 				3F52DE6B2639F1CF00D94AB8 /* AvatarThumbnailView.swift in Sources */,
+				3F52DE7F263C704900D94AB8 /* CheckBox.swift in Sources */,
+				3F52DE89263C717800D94AB8 /* OpaqueProgressView.swift in Sources */,
 				9E1EE8B0262E73E800FBF645 /* SingletonVM.swift in Sources */,
 				9E057D0A263373FC0088C79F /* ChatMessage.swift in Sources */,
+				3F52DE86263C711900D94AB8 /* LabeledText.swift in Sources */,
 				BF6536FD262D14ED0054E29F /* BackButton.swift in Sources */,
 				9E057CF9263373850088C79F /* AuthorView.swift in Sources */,
 				9E057CEE263373850088C79F /* ChatRoomView.swift in Sources */,
 				3F52DE4A2639E33700D94AB8 /* ThumbnailView.swift in Sources */,
+				3F52DE7C263C6FAE00D94AB8 /* UIImage+Thumbnail.swift in Sources */,
 				3F52DE6F2639F42E00D94AB8 /* MapThumbnailWithDelete.swift in Sources */,
 				3F52DE592639E43800D94AB8 /* SendButton.swift in Sources */,
 				3F52DE502639E3FA00D94AB8 /* LocationButton.swift in Sources */,

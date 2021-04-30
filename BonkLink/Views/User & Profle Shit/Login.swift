@@ -22,9 +22,11 @@ struct Login: View {
     
     var body: some View {
         VStack(spacing: 15) {
-            Text("BonkLink")
-                .font(.largeTitle).foregroundColor(Color.black)
-                .padding([.top, .bottom], 40)
+            Image("BonkLink_logo2")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 250)
+                .frame(height: 250)
             HStack() {
                 VStack{
                     Text("Username")
