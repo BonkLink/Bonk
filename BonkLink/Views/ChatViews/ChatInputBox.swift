@@ -18,7 +18,7 @@ struct ChatInputBox: View {
     
     private enum Dimensions {
         static let maxHeight: CGFloat = 100
-        static let minHeight: CGFloat = 100
+        static let minHeight: CGFloat = 75
         static let radius: CGFloat = 10
         static let imageSize: CGFloat = 70
         static let padding: CGFloat = 15
@@ -101,7 +101,7 @@ struct ChatInputBox: View {
     private func sendMessage(text: String, photo: Photo?, location: [Double]) {
             let chatMessage = ChatMessage(
                 author: state.user?.userName ?? "Unknown",
-                test: text,
+                text: text,
                 image: photo,
                 location: location)
             send(chatMessage)

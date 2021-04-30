@@ -21,7 +21,8 @@ struct MapThumbnailWithExpand: View {
     
     private enum Dimensions {
         static let frameSize: CGFloat = 100
-        static let imageSize: CGFloat = 70
+        static let imageSize: CGFloat = 80
+        static let imageWidth: CGFloat = 200
         static let buttonSize: CGFloat = 30
         static let radius: CGFloat = 8
         static let buttonPadding: CGFloat = 4
@@ -34,7 +35,7 @@ struct MapThumbnailWithExpand: View {
                     MapPin(coordinate: item.coordinate)
                 }
                 .animation(.easeIn)
-                .frame(width: Dimensions.imageSize, height: Dimensions.imageSize, alignment: .center)
+                .frame(width: Dimensions.imageWidth, height: Dimensions.imageSize, alignment: .center)
                 .clipShape(RoundedRectangle(cornerRadius: Dimensions.radius))
             }
             NavigationLink(destination: MapView(location: position, annotationItems: annotationItems), isActive: $showingFullMap) {

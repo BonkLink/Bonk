@@ -30,9 +30,9 @@
 	<key>UILaunchScreen</key>
 	<dict>
 		<key>UIColorName</key>
-		<string>BonkLink_logo3-1</string>
+		<string>Background</string>
 		<key>UIImageName</key>
-		<string>BonkLink_logo3</string>
+		<string>BonkLink_logo1 (1)</string>
 	</dict>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

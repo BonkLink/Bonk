@@ -68,6 +68,7 @@ struct Login: View {
                       .foregroundColor(.white)
                         
                       .padding()
+                    
                         
                       .frame(width: 150, height: 50)
                       .background(Color.green)
@@ -75,7 +76,7 @@ struct Login: View {
                     
                 }
 
-             
+                
                 Button(action: {
                     self.signupUser(userName: userName, passwd: password)
                 }) {
