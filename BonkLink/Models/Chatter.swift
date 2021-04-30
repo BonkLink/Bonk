@@ -11,7 +11,7 @@ import RealmSwift
 @objcMembers class Chatter: Object, ObjectKeyIdentifiable {
     dynamic var _id = UUID().uuidString
     dynamic var partition = "all-users=all-the-users"
-    dynamic var UserName = ""
+    dynamic var userName = ""
     dynamic var displayName: String?
     dynamic var avatarImage: Photo?
     dynamic var lastSeenAt: Date?

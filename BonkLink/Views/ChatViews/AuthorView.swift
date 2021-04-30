@@ -32,7 +32,7 @@ struct AuthorView: View {
                     Text(name)
                     .font(.caption)
                 } else {
-                    Text(author.UserName)
+                    Text(author.userName)
                         .font(.caption)
                 }
                 Spacer()

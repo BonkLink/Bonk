@@ -97,8 +97,8 @@ struct NewConversationView: View {
          }
          candidateMembers = []
          candidateChatters.forEach { chatter in
-             if !members.contains(chatter.UserName) && chatter.UserName != state.user?.userName {
-                 candidateMembers.append(chatter.UserName)
+             if !members.contains(chatter.userName) && chatter.userName != state.user?.userName {
+                 candidateMembers.append(chatter.userName)
              }
          }
      }
