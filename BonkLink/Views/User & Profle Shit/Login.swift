@@ -60,7 +60,7 @@ struct Login: View {
                 }
             }
             
-            HStack() {
+            HStack(spacing: 60) {
           
                 Button(action: {if(state.user == nil){self.userActionLogin(userName: userName, password: password)}}){
                     Text("Sign In")
@@ -71,7 +71,7 @@ struct Login: View {
                     
                         
                       .frame(width: 150, height: 50)
-                      .background(Color.green)
+                      .background(Color.black)
                       .cornerRadius(15.0)
                     
                 }
@@ -82,10 +82,10 @@ struct Login: View {
                 }) {
                     Text("Sign-Up")
                       .font(.headline)
-                      .foregroundColor(.white)
+                      .foregroundColor(.pink)
                       .padding()
                       .frame(width: 150, height: 50)
-                      .background(Color.blue)
+                      .background(Color.white)
                       .cornerRadius(15.0)
                 }
 
