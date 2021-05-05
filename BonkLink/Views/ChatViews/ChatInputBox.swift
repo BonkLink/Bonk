@@ -101,7 +101,7 @@ struct ChatInputBox: View {
     private func sendMessage(text: String, photo: Photo?, location: [Double]) {
             let chatMessage = ChatMessage(
                 author: state.user?.userName ?? "Unknown",
-                test: text,
+                text: text,
                 image: photo,
                 location: location)
             send(chatMessage)

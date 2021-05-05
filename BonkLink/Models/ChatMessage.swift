@@ -20,7 +20,7 @@ import RealmSwift
         return "_id"
         
     }
-    convenience init(author:String, test:String, image:Photo?, location:[Double] = []){
+    convenience init(author:String, text:String, image:Photo?, location:[Double] = []){
         self.init()
         self.author = author
         self.text = text

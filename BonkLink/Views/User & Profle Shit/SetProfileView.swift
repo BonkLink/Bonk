@@ -50,11 +50,18 @@ struct SetProfileView: View {
         .padding()
      
         .navigationBarItems(
-            leading: Button(action: { isPresented = false }) { BackButton() }
+            leading: Button(action: { goBack() }) { BackButton() }
         ,
             trailing:  LogoutButton()
         )
         .navigationBarHidden(!state.isUserLoggedIn)
+    }
+    
+    func goBack(){
+        isPresented = false;
+        if(state.user?.isProfileSet == true){
+            print("SET!")
+        }
     }
     
     private func initData() {
