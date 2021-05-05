@@ -58,11 +58,11 @@ struct SetProfileView: View {
     }
     
     func goBack(){
-            isPresented = false;
-            if(state.user?.isProfileSet == true){
-                print("SET!")
-            }
+        isPresented = false;
+        if(state.user?.isProfileSet == true){
+            print("SET!")
         }
+    }
     
     private func initData() {
         displayName = state.user?.userPreferences?.displayName ?? ""
