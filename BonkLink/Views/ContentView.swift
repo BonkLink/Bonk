@@ -21,16 +21,9 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             ZStack{
-                Color.black.edgesIgnoringSafeArea(.all)
+                //Color.black.edgesIgnoringSafeArea(.all)
                 VStack{
                     if currState.isUserLoggedIn {
-//                        HStack{
-//                        Text("LOGGED")
-//                        LogoutButton()
-//                        }
-//
-                        
-                        
                         if(currState.user?.userName != nil) && (!currState.user!.isProfileSet || showProfile){
                             SetProfileView(isPresented: $showProfile)
                                .environment(\.realmConfiguration,
@@ -49,24 +42,20 @@ struct ContentView: View {
                                     online: true) { showProfile.toggle() } : nil
                             )
                             //LogoutButton();
+                                .navigationBarColor(.black)
                         }
                     }
                     //otherwise, user isn't logged in
                     else{
-   
                     Login()
                     }
                     if let error = currState.error {
                               Text("Error: \(error)")
                                   .foregroundColor(Color.red)
                     }
-                    
                 }
-
-
             }
-            .navigationBarColor(UIColor.black)
-            
+            //.navigationBarColor(UIColor.black)
         }
         .currentDeviceNavigationViewStyle(alwaysStacked: !currState.isUserLoggedIn )
 
@@ -81,6 +70,7 @@ struct ContentView: View {
         .onReceive(NotificationCenter.default.publisher(for:UIApplication.willEnterForegroundNotification)){ _ in
             //Clear notifications here!
         }
+        //.foregroundColor(.gray)
         .background(
           LinearGradient(gradient: Gradient(colors: [.purple, .gray]), startPoint: .top, endPoint: .bottom))
     }
