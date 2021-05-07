@@ -28,13 +28,8 @@ struct ContentView: View {
             ZStack{
                 VStack{
                     if currState.isUserLoggedIn {
-//                        HStack{
-//                        Text("LOGGED")
-//                        LogoutButton()
-//                        }
-//
-                    
-                        
+
+            
                         if(!currState.user!.isProfileSet){
                             SetProfileView(isPresented: $showProfile)
                                .environment(\.realmConfiguration,

@@ -74,7 +74,7 @@ struct SetProfileView: View {
         
         state.indicateActivity = true
         do {
-            try userRealm.write {
+            try state.userRealm?.write {
                 state.user?.userPreferences?.displayName = displayName
                 if photoAdded {
                     guard let newPhoto = photo else {
