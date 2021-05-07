@@ -38,6 +38,8 @@ struct ContentView: View {
                         }
                         else if(currState.user?.isProfileSet == true){
                             ConversationListView()
+                                .background(
+                                  LinearGradient(gradient: Gradient(colors: [.purple, .gray]), startPoint: .top, endPoint: .bottom))
                             //Text("Logged in with user profile set")
                                 .environment(\.realmConfiguration, app.currentUser!.configuration(partitionValue: "user=\(currState.user?._id ?? "")"))
                             .navigationBarTitle("Chats", displayMode: .inline)
@@ -47,7 +49,6 @@ struct ContentView: View {
                                     online: true) { showProfile.toggle() } : nil
                             )
                             //LogoutButton();
-
                         }
                     }
                     //otherwise, user isn't logged in
@@ -79,8 +80,9 @@ struct ContentView: View {
         .onReceive(NotificationCenter.default.publisher(for:UIApplication.willEnterForegroundNotification)){ _ in
             //Clear notifications here!
         }
+        .background(
+          LinearGradient(gradient: Gradient(colors: [.purple, .gray]), startPoint: .top, endPoint: .bottom))
     }
-    
 }
 
 //addNotification() function

@@ -44,7 +44,7 @@ struct ChatInputBox: View {
                     .onTapGesture(perform: focusAction)
                     .padding(Dimensions.padding)
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: Dimensions.minHeight, maxHeight: Dimensions.maxHeight)
-                    .background(Color.gray.opacity(0.5))
+                    .background(Color.gray.opacity(0.2))
                     .clipShape(RoundedRectangle(cornerRadius: Dimensions.radius))
             }
             HStack {

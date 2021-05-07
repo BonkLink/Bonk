@@ -47,12 +47,17 @@ struct ConversationListView: View {
                 NavigationLink(
                     destination: ChatRoomView(conversation: conversation),
                     isActive: $showConversation) { EmptyView() }
+                    .background(
+                      LinearGradient(gradient: Gradient(colors: [.black, .gray]), startPoint: .top, endPoint: .bottom))
             } else {
                 if let user = state.user {
                     NavigationLink(
                         destination: ChatRoomView(conversation: conversation)
                             .environment(\.realmConfiguration, app.currentUser!.configuration(partitionValue: "user=\(user._id)")),
                         isActive: $showConversation) { EmptyView() }
+                        .background(
+                          LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .top, endPoint: .bottom))
+                        .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                 }
             }
         }
@@ -60,7 +65,12 @@ struct ConversationListView: View {
             NewConversationView()
                 .environmentObject(state)
                 .environment(\.realmConfiguration, app.currentUser!.configuration(partitionValue: "all-users=all-the-users"))
+                .background(
+                  LinearGradient(gradient: Gradient(colors: [.black, .gray]), startPoint: .top, endPoint: .bottom))
         }
+        .background(
+          LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .top, endPoint: .bottom))
+        .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
     }
 }
 

@@ -85,6 +85,9 @@ struct NewConversationView: View {
             )
         }
         .onAppear(perform: searchUsers)
+        .background(
+          LinearGradient(gradient: Gradient(colors: [.purple, .pink]), startPoint: .top, endPoint: .bottom))
+        .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
     }
     
     private func searchUsers() {

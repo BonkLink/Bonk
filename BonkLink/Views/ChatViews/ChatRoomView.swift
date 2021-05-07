@@ -32,6 +32,9 @@ struct ChatRoomView: View {
         .padding(.horizontal, padding)
         .onAppear(perform: clearUnreadCount)
         .onDisappear(perform: clearUnreadCount)
+        .background(
+          LinearGradient(gradient: Gradient(colors: [.black, .black]), startPoint: .top, endPoint: .bottom))
+        //.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
     }
     
     private func clearUnreadCount() {
