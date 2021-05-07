@@ -107,7 +107,11 @@ struct SetProfileView_Previews: PreviewProvider {
 //        let previewState: AppState = .sample
         return AppearancePreviews(
             NavigationView {
+                ZStack{
+                    Color.red.edgesIgnoringSafeArea(.all)
+                }
                 SetProfileView(isPresented: .constant(true))
+                .navigationBarColor(UIColor.black)
             }
         )
 //        .environmentObject(previewState)

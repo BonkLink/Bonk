@@ -17,6 +17,8 @@ struct ChatRoomView: View {
     let padding: CGFloat = 8
     
     var body: some View {
+        NavigationView{
+            ZStack{
         VStack {
             if let conversation = conversation {
                 if isPreview {
@@ -27,14 +29,16 @@ struct ChatRoomView: View {
                 }
             }
             Spacer()
-        }
+        }}
         .navigationBarTitle(conversation?.displayName ?? "Chat", displayMode: .inline)
         .padding(.horizontal, padding)
         .onAppear(perform: clearUnreadCount)
         .onDisappear(perform: clearUnreadCount)
+        .navigationBarColor(UIColor.black)
         .background(
-          LinearGradient(gradient: Gradient(colors: [.black, .black]), startPoint: .top, endPoint: .bottom))
+          LinearGradient(gradient: Gradient(colors: [.black, .gray]), startPoint: .top, endPoint: .bottom))
         //.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+        }
     }
     
     private func clearUnreadCount() {

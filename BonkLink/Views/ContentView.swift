@@ -18,10 +18,10 @@ struct ContentView: View {
     @State var showProfile = false;
     var action: () -> Void = {}
     
-    
     var body: some View {
         NavigationView{
             ZStack{
+                Color.black.edgesIgnoringSafeArea(.all)
                 VStack{
                     if currState.isUserLoggedIn {
 //                        HStack{
@@ -65,6 +65,7 @@ struct ContentView: View {
 
 
             }
+            .navigationBarColor(UIColor.black)
             
         }
         .currentDeviceNavigationViewStyle(alwaysStacked: !currState.isUserLoggedIn )
@@ -84,6 +85,7 @@ struct ContentView: View {
           LinearGradient(gradient: Gradient(colors: [.purple, .gray]), startPoint: .top, endPoint: .bottom))
     }
 }
+
 
 //addNotification() function
 //clearNotificiation() function
