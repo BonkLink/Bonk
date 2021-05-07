@@ -14,6 +14,7 @@ struct SetProfileView: View {
     
     @Binding var isPresented: Bool
 
+    
     @State private var displayName = ""
     @State private var photo: Photo?
     @State private var photoAdded = false
@@ -58,7 +59,7 @@ struct SetProfileView: View {
     }
     
     func goBack(){
-        isPresented = false;
+        state.showProf = false;
         if(state.user?.isProfileSet == true){
             print("SET!")
         }

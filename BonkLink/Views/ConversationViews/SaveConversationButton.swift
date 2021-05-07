@@ -36,6 +36,7 @@ struct SaveConversationButton: View {
         do {
             try userRealm.write {
                 state.user?.conversations.append(conversation)
+                members.map { Member($0) }
             }
         } catch {
             state.error = "Unable to open Realm write transaction"

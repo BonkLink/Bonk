@@ -15,7 +15,11 @@ struct ContentView: View {
     //Remind users after 12 hours that they're logged in!
     @AppStorage("remindUserOnline") var remindOnLineUser = false;
     @AppStorage("reminderUserHours") var remindHours = 12.0;
+    
+    
     @State var showProfile = false;
+    
+    
     var action: () -> Void = {}
     
     
@@ -29,12 +33,15 @@ struct ContentView: View {
 //                        LogoutButton()
 //                        }
 //
+                    
                         
-                        
-                        if(currState.user?.userName != nil) && (!currState.user!.isProfileSet || showProfile){
+                        if(!currState.user!.isProfileSet){
                             SetProfileView(isPresented: $showProfile)
                                .environment(\.realmConfiguration,
                                            app.currentUser!.configuration(partitionValue: "user=\(currState.user?._id ?? "")"))
+                        }
+                        else if(currState.showProf){
+                            SetProfileView(isPresented: $showProfile)
                         }
                         else if(currState.user?.isProfileSet == true){
                             ConversationListView()
@@ -44,7 +51,7 @@ struct ContentView: View {
                             .navigationBarItems(
                                 trailing: currState.isUserLoggedIn && !currState.indicateActivity ? UserAvatarView(
                                     photo: currState.user?.userPreferences?.avatarImage,
-                                    online: true) { showProfile.toggle() } : nil
+                                    online: true) { currState.showProf = true } : nil
                             )
                             //LogoutButton();
 
