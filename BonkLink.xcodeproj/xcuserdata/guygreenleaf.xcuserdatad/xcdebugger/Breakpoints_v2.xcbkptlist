@@ -629,7 +629,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "88F1D3ED-D807-4897-81BD-22A037A73061"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BonkLink/Views/User &amp; Profle Shit/SetProfileView.swift"
