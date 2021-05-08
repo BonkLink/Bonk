@@ -18,6 +18,9 @@ struct ContentView: View {
     @State var showProfile = false;
     var action: () -> Void = {}
     
+    @State var showNewChat = false;
+    
+    
     var body: some View {
         NavigationView{
             ZStack{
@@ -31,12 +34,21 @@ struct ContentView: View {
                         }
                         else if(currState.user?.isProfileSet == true){
                             ConversationListView()
-                                .background(
-                                  LinearGradient(gradient: Gradient(colors: [.purple, .gray]), startPoint: .top, endPoint: .bottom))
+//                                .background(
+//                                  LinearGradient(gradient: Gradient(colors: [.purple, .gray]), startPoint: .top, endPoint: .bottom))
                             //Text("Logged in with user profile set")
                                 .environment(\.realmConfiguration, app.currentUser!.configuration(partitionValue: "user=\(currState.user?._id ?? "")"))
                             .navigationBarTitle("Chats", displayMode: .inline)
                             .navigationBarItems(
+                                leading: Button("New Chat") {
+                                    self.showNewChat.toggle()
+                                }.sheet(isPresented: $showNewChat){
+                                                NewConversationView()
+                                                    .environmentObject(currState)
+                                                    .environment(\.realmConfiguration, app.currentUser!.configuration(partitionValue: "all-users=all-the-users"))
+                                                    .background(
+                                                      LinearGradient(gradient: Gradient(colors: [.black, .gray]), startPoint: .top, endPoint: .bottom))
+                                } ,
                                 trailing: currState.isUserLoggedIn && !currState.indicateActivity ? UserAvatarView(
                                     photo: currState.user?.userPreferences?.avatarImage,
                                     online: true) { showProfile.toggle() } : nil
@@ -70,9 +82,6 @@ struct ContentView: View {
         .onReceive(NotificationCenter.default.publisher(for:UIApplication.willEnterForegroundNotification)){ _ in
             //Clear notifications here!
         }
-        //.foregroundColor(.gray)
-        .background(
-          LinearGradient(gradient: Gradient(colors: [.purple, .gray]), startPoint: .top, endPoint: .bottom))
     }
 }
 
