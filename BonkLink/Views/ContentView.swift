@@ -21,6 +21,7 @@ struct ContentView: View {
     @State var showNewChat = false;
     
     
+    
     var body: some View {
         NavigationView{
             ZStack{

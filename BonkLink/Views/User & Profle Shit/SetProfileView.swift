@@ -18,6 +18,9 @@ struct SetProfileView: View {
     @State private var photo: Photo?
     @State private var photoAdded = false
     
+    
+   
+    
     var body: some View {
         Form {
             Section(header: Text("User Profile")) {
@@ -47,14 +50,15 @@ struct SetProfileView: View {
             }
         }
         .onAppear { initData() }
-        .padding()
-     
+//        .padding()
+        .navigationTitle(Text(""))
         .navigationBarItems(
-            leading: Button(action: { goBack() }) { BackButton() }
+            leading: Button(action: { goBack() }) { BackButton() } .foregroundColor(Color.black)
         ,
             trailing:  LogoutButton()
         )
-        .navigationBarHidden(!state.isUserLoggedIn)
+        
+//        .navigationBarHidden(!state.isUserLoggedIn)
     }
     
     func goBack(){
