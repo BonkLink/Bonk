@@ -29,9 +29,15 @@ struct ContentView: View {
                 VStack{
                     if currState.isUserLoggedIn {
                         if(currState.user?.userName != nil) && (!currState.user!.isProfileSet || showProfile){
-                            SetProfileView(isPresented: $showProfile)
-                               .environment(\.realmConfiguration,
-                                           app.currentUser!.configuration(partitionValue: "user=\(currState.user?._id ?? "")"))
+                            
+                            
+                            withAnimation(.interpolatingSpring(stiffness: 5, damping: 1)) {
+                                SetProfileView(isPresented: $showProfile)
+                                   .environment(\.realmConfiguration,
+                                               app.currentUser!.configuration(partitionValue: "user=\(currState.user?._id ?? "")"))
+                        
+                            }
+                            
                         }
                         else if(currState.user?.isProfileSet == true){
                             ConversationListView()

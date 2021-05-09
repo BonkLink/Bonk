@@ -50,10 +50,12 @@ struct SetProfileView: View {
             }
         }
         .onAppear { initData() }
+        .animation(.interactiveSpring())
 //        .padding()
         .navigationTitle(Text(""))
+        .navigationBarColor(.black)
         .navigationBarItems(
-            leading: Button(action: { goBack() }) { BackButton() } .foregroundColor(Color.black)
+            leading: Button(action: { goBack() }) { BackButton() } .foregroundColor(Color.white)
         ,
             trailing:  LogoutButton()
         )
@@ -106,6 +108,8 @@ struct SetProfileView: View {
     }
 }
 
+
+
 struct SetProfileView_Previews: PreviewProvider {
     static var previews: some View {
 //        let previewState: AppState = .sample
@@ -116,6 +120,7 @@ struct SetProfileView_Previews: PreviewProvider {
                 }
                 SetProfileView(isPresented: .constant(true))
                 .navigationBarColor(UIColor.black)
+                    .navigationBarColor(.black)
             }
         )
 //        .environmentObject(previewState)

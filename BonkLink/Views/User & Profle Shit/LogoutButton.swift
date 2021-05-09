@@ -24,7 +24,7 @@ struct LogoutButton: View {
                 }
                 logout()
             }
-        } .foregroundColor(Color.black)
+        } .foregroundColor(Color.white)
         
         
     }

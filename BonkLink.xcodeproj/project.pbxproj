@@ -34,7 +34,6 @@
 		3F52DE86263C711900D94AB8 /* LabeledText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52DE85263C711900D94AB8 /* LabeledText.swift */; };
 		3F52DE89263C717800D94AB8 /* OpaqueProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52DE88263C717800D94AB8 /* OpaqueProgressView.swift */; };
 		3F52DE8E263C958F00D94AB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F52DE8D263C958F00D94AB8 /* LaunchScreen.storyboard */; };
-		3F52DE91263C9A1000D94AB8 /* BonkLink_logo1 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 3F52DE90263C9A1000D94AB8 /* BonkLink_logo1 (1).png */; };
 		3F52DE9A2645BA0B00D94AB8 /* ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F52DE992645BA0B00D94AB8 /* ViewController.storyboard */; };
 		3F52DE9E2645C03500D94AB8 /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52DE9D2645C03500D94AB8 /* NavigationBarModifier.swift */; };
 		9E057CEE263373850088C79F /* ChatRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E057CDF263373850088C79F /* ChatRoomView.swift */; };
@@ -108,7 +107,6 @@
 		3F52DE85263C711900D94AB8 /* LabeledText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledText.swift; sourceTree = "<group>"; };
 		3F52DE88263C717800D94AB8 /* OpaqueProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpaqueProgressView.swift; sourceTree = "<group>"; };
 		3F52DE8D263C958F00D94AB8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3F52DE90263C9A1000D94AB8 /* BonkLink_logo1 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BonkLink_logo1 (1).png"; path = "../../../Downloads/BonkLink_logo1 (1).png"; sourceTree = "<group>"; };
 		3F52DE992645BA0B00D94AB8 /* ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ViewController.storyboard; sourceTree = "<group>"; };
 		3F52DE9D2645C03500D94AB8 /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
 		9E057CDF263373850088C79F /* ChatRoomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomView.swift; sourceTree = "<group>"; };
@@ -302,7 +300,6 @@
 				9E38140826265D0600DBE310 /* BonkLinkApp.swift */,
 				9E38140C26265D0700DBE310 /* Assets.xcassets */,
 				9E38141126265D0700DBE310 /* Info.plist */,
-				3F52DE90263C9A1000D94AB8 /* BonkLink_logo1 (1).png */,
 				9E38140E26265D0700DBE310 /* Preview Content */,
 				9E1EE8AF262E73E800FBF645 /* SingletonVM.swift */,
 				9E057D1126337F8B0088C79F /* tester2.swift */,
@@ -428,7 +425,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F52DE91263C9A1000D94AB8 /* BonkLink_logo1 (1).png in Resources */,
 				3F52DE9A2645BA0B00D94AB8 /* ViewController.storyboard in Resources */,
 				3F52DE8E263C958F00D94AB8 /* LaunchScreen.storyboard in Resources */,
 				9E38141026265D0700DBE310 /* Preview Assets.xcassets in Resources */,

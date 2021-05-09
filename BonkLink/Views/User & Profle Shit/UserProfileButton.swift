@@ -20,7 +20,9 @@ struct UserProfileButton: View {
 struct UserProfileButton_Previews: PreviewProvider {
     static var previews: some View {
         return AppearancePreviews(
-            UserProfileButton(action: { })
+            UserProfileButton(action: { }
+            
+            )
         )
         .padding()
         .previewLayout(.sizeThatFits)
