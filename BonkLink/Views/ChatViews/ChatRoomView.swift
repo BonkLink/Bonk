@@ -28,16 +28,18 @@ struct ChatRoomView: View {
                         .environment(\.realmConfiguration, app.currentUser!.configuration(partitionValue: "conversation=\(conversation.id)"))
                 }
             }
-            Spacer()
+           
         }//}
         .navigationBarTitle(conversation?.displayName ?? "Chat", displayMode: .inline)
         .padding(.horizontal, padding)
+        .padding(.bottom)
         .onAppear(perform: clearUnreadCount)
         .onDisappear(perform: clearUnreadCount)
         .navigationBarColor(UIColor.black)
+        .frame(maxHeight: .infinity)
         .background(
           LinearGradient(gradient: Gradient(colors: [.black, .gray]), startPoint: .top, endPoint: .bottom))
-        //.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+        .edgesIgnoringSafeArea(.bottom)
         //}
     }
     

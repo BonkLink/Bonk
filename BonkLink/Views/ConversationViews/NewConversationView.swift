@@ -61,6 +61,7 @@ struct NewConversationView: View {
                         }
                         .onDelete(perform: deleteMember)
                     }
+                
                     Spacer()
                 }
                 Spacer()
