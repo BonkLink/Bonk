@@ -36,7 +36,6 @@ struct NewConversationView: View {
         
         return NavigationView {
             ZStack {
-                //Color.black.edgesIgnoringSafeArea(.all)
                 VStack {
                     InputField(title: "Chat Name", text: $name)
                     CaptionLabel(title: "Add Members")
@@ -82,6 +81,7 @@ struct NewConversationView: View {
                 }
             }
             .disabled(isEmpty)
+            .animation(.spring())
             .padding()
             )
             .navigationBarColor(UIColor.black)
