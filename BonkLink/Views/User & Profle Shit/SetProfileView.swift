@@ -65,6 +65,7 @@ struct SetProfileView: View {
     
     func goBack(){
         isPresented = false;
+        state.showProf = false;
         if(state.user?.isProfileSet == true){
             print("SET!")
         }
