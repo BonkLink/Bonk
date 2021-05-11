@@ -61,9 +61,6 @@ struct ChatRoomBubblesView: View {
         .padding(.horizontal, Dimensions.padding)
         .onAppear { loadChatRoom() }
         .onDisappear { closeChatRoom() }
-//        .background(
-//          LinearGradient(gradient: Gradient(colors: [.black, .pink]), startPoint: .top, endPoint: .bottom))
-//        .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
     }
     
     private func loadChatRoom() {
