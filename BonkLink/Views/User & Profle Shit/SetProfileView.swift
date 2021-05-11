@@ -55,7 +55,7 @@ struct SetProfileView: View {
         .navigationTitle(Text(""))
         .navigationBarColor(.black)
         .navigationBarItems(
-            leading: Button(action: { goBack() }) { BackButton() } .foregroundColor(Color.white)
+            leading: Button(action: { withAnimation(.easeIn){ goBack()} }) {withAnimation(.easeIn){ BackButton()} } .foregroundColor(Color.white)
         ,
             trailing:  LogoutButton()
         )

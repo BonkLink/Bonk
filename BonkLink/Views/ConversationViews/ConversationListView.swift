@@ -27,7 +27,7 @@ struct ConversationListView: View {
     
     var body: some View {
         ZStack {
-            Image("new").resizable().ignoresSafeArea()
+            Image("background1").resizable().ignoresSafeArea()
             if let conversations = users[0].conversations.sorted(by: sortDescriptors) {
                 
                 ScrollView{

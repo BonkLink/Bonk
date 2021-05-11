@@ -29,9 +29,11 @@ struct ChatRoomBubblesView: View {
                 ScrollViewReader { (proxy: ScrollViewProxy) in
                     VStack {
                         ForEach(chats) { chatMessage in
+                            withAnimation(.easeIn){
                             ChatBubbleView(chatMessage: chatMessage,
                                            authorName: chatMessage.author != state.user?.userName ? chatMessage.author : nil,
                                            isPreview: isPreview)
+                        }
                         }
                     }
                     .onAppear {

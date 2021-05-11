@@ -41,6 +41,7 @@ struct ChatBubbleView: View {
 //                        .font(.caption)
                 }
                 HStack {
+                    VStack{
                     if let photo = chatMessage.image {
                         ThumbnailWithExpand(photo: photo)
                         .padding(Dimensions.padding)
@@ -54,6 +55,7 @@ struct ChatBubbleView: View {
                     if chatMessage.text != "" {
                         Text(chatMessage.text)
                         .padding(Dimensions.padding)
+                    }
                     }
                     Spacer()
                     Text(chatMessage.timestamp, style: isLessThanOneDay ?  .time : .date)
