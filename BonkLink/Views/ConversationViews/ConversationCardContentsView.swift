@@ -36,7 +36,8 @@ struct ConversationCardContentsView: View {
                 .padding(.trailing)
             VStack(alignment: .leading) {
                 Text(conversation.displayName)
-                    .fontWeight(conversation.unreadCount > 0 ? .bold : .regular)
+                    .foregroundColor(.white)
+                    .fontWeight(conversation.unreadCount > 0 ? .bold : .bold)
                 CaptionLabel(title: conversation.unreadCount == 0 ? "" :
                         "\(conversation.unreadCount) new \(conversation.unreadCount == 1 ? "message" : "messages")")
             }

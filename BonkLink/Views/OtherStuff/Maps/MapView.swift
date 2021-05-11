@@ -34,6 +34,7 @@ struct MapView: View {
             annotationItems: annotationItems) { item in
             MapPin(coordinate: item.coordinate)
         }
+        .scaleEffect(1.5)
         .animation(.easeIn)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: Button(action: { self.presentationMode.wrappedValue.dismiss() }) {

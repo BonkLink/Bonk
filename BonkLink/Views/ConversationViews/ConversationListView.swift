@@ -51,6 +51,7 @@ struct ConversationListView: View {
                     isActive: $showConversation) { EmptyView() }
                     .background(
                       LinearGradient(gradient: Gradient(colors: [.black, .gray]), startPoint: .top, endPoint: .bottom))
+                    .transition(.scale)
             } else {
                 if let user = state.user {
                     NavigationLink(
@@ -60,6 +61,7 @@ struct ConversationListView: View {
                         .background(
                           LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .top, endPoint: .bottom))
                         .edgesIgnoringSafeArea(.bottom)
+                        .transition(.opacity)
                 }
             }
         }

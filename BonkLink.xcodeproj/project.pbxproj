@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E2C4FCB1360B18FFE886528 /* Pods_BonkLink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6612E556513F0514F725EB70 /* Pods_BonkLink.framework */; };
 		3F52DE232638AA7E00D94AB8 /* ConversationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52DE222638AA7E00D94AB8 /* ConversationCardView.swift */; };
 		3F52DE262638B1FB00D94AB8 /* NewConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52DE252638B1FB00D94AB8 /* NewConversationView.swift */; };
 		3F52DE292638B65100D94AB8 /* ConversationCardContentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F52DE282638B65100D94AB8 /* ConversationCardContentsView.swift */; };
@@ -62,8 +63,8 @@
 		9E38140926265D0600DBE310 /* BonkLinkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E38140826265D0600DBE310 /* BonkLinkApp.swift */; };
 		9E38140D26265D0700DBE310 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E38140C26265D0700DBE310 /* Assets.xcassets */; };
 		9E38141026265D0700DBE310 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E38140F26265D0700DBE310 /* Preview Assets.xcassets */; };
-		9E38141A262661C700DBE310 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 9E381419262661C700DBE310 /* Realm */; };
-		9E38141C262661C700DBE310 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9E38141B262661C700DBE310 /* RealmSwift */; };
+		9E38141A262661C700DBE310 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 9E381419262661C700DBE310 /* SwiftPackageProductDependency */; };
+		9E38141C262661C700DBE310 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 9E38141B262661C700DBE310 /* SwiftPackageProductDependency */; };
 		9E38141F262664F500DBE310 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E38141E262664F500DBE310 /* AppState.swift */; };
 		BF6536F5262D120F0054E29F /* PreviewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6536F4262D120F0054E29F /* PreviewHelpers.swift */; };
 		BF6536F9262D139C0054E29F /* PhotoCaptureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6536F8262D139C0054E29F /* PhotoCaptureController.swift */; };
@@ -80,6 +81,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		196275534173A10F2F886892 /* Pods-BonkLink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonkLink.debug.xcconfig"; path = "Target Support Files/Pods-BonkLink/Pods-BonkLink.debug.xcconfig"; sourceTree = "<group>"; };
+		36F491CC8F3E338F630C261C /* Pods-BonkLink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonkLink.release.xcconfig"; path = "Target Support Files/Pods-BonkLink/Pods-BonkLink.release.xcconfig"; sourceTree = "<group>"; };
 		3F52DE222638AA7E00D94AB8 /* ConversationCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCardView.swift; sourceTree = "<group>"; };
 		3F52DE252638B1FB00D94AB8 /* NewConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationView.swift; sourceTree = "<group>"; };
 		3F52DE282638B65100D94AB8 /* ConversationCardContentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCardContentsView.swift; sourceTree = "<group>"; };
@@ -109,6 +112,7 @@
 		3F52DE8D263C958F00D94AB8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F52DE992645BA0B00D94AB8 /* ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ViewController.storyboard; sourceTree = "<group>"; };
 		3F52DE9D2645C03500D94AB8 /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
+		6612E556513F0514F725EB70 /* Pods_BonkLink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BonkLink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E057CDF263373850088C79F /* ChatRoomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomView.swift; sourceTree = "<group>"; };
 		9E057CE0263373850088C79F /* ConversationListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationListView.swift; sourceTree = "<group>"; };
 		9E057CE1263373850088C79F /* ChatBubbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBubbleView.swift; sourceTree = "<group>"; };
@@ -157,8 +161,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E38141C262661C700DBE310 /* RealmSwift in Frameworks */,
-				9E38141A262661C700DBE310 /* Realm in Frameworks */,
+				9E38141C262661C700DBE310 /* BuildFile in Frameworks */,
+				9E38141A262661C700DBE310 /* BuildFile in Frameworks */,
+				0E2C4FCB1360B18FFE886528 /* Pods_BonkLink.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +265,16 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		953D6D2BE990EBB96C04C0B2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				196275534173A10F2F886892 /* Pods-BonkLink.debug.xcconfig */,
+				36F491CC8F3E338F630C261C /* Pods-BonkLink.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9E057CE4263373850088C79F /* User & Profle Shit */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,6 +293,8 @@
 			children = (
 				9E38140726265D0600DBE310 /* BonkLink */,
 				9E38140626265D0600DBE310 /* Products */,
+				953D6D2BE990EBB96C04C0B2 /* Pods */,
+				DA868AD811527359792D71BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -361,6 +378,14 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		DA868AD811527359792D71BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6612E556513F0514F725EB70 /* Pods_BonkLink.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -368,9 +393,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9E38141426265D0700DBE310 /* Build configuration list for PBXNativeTarget "BonkLink" */;
 			buildPhases = (
+				79E5C0BA1A401D7D36411AFD /* [CP] Check Pods Manifest.lock */,
 				9E38140126265D0600DBE310 /* Sources */,
 				9E38140226265D0600DBE310 /* Frameworks */,
 				9E38140326265D0600DBE310 /* Resources */,
+				5C479686AB9BFDC77CB66A74 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -378,8 +405,8 @@
 			);
 			name = BonkLink;
 			packageProductDependencies = (
-				9E381419262661C700DBE310 /* Realm */,
-				9E38141B262661C700DBE310 /* RealmSwift */,
+				9E381419262661C700DBE310 /* SwiftPackageProductDependency */,
+				9E38141B262661C700DBE310 /* SwiftPackageProductDependency */,
 			);
 			productName = BonkLink;
 			productReference = 9E38140526265D0600DBE310 /* BonkLink.app */;
@@ -409,7 +436,7 @@
 			);
 			mainGroup = 9E3813FC26265D0600DBE310;
 			packageReferences = (
-				9E381418262661C700DBE310 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				9E381418262661C700DBE310 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 9E38140626265D0600DBE310 /* Products */;
 			projectDirPath = "";
@@ -433,6 +460,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5C479686AB9BFDC77CB66A74 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BonkLink/Pods-BonkLink-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BonkLink/Pods-BonkLink-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BonkLink/Pods-BonkLink-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79E5C0BA1A401D7D36411AFD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BonkLink-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9E38140126265D0600DBE310 /* Sources */ = {
@@ -627,6 +696,7 @@
 		};
 		9E38141526265D0700DBE310 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 196275534173A10F2F886892 /* Pods-BonkLink.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -649,6 +719,7 @@
 		};
 		9E38141626265D0700DBE310 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36F491CC8F3E338F630C261C /* Pods-BonkLink.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -693,7 +764,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9E381418262661C700DBE310 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+		9E381418262661C700DBE310 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-cocoa";
 			requirement = {
@@ -704,14 +775,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9E381419262661C700DBE310 /* Realm */ = {
+		9E381419262661C700DBE310 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9E381418262661C700DBE310 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			package = 9E381418262661C700DBE310 /* RemoteSwiftPackageReference */;
 			productName = Realm;
 		};
-		9E38141B262661C700DBE310 /* RealmSwift */ = {
+		9E38141B262661C700DBE310 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9E381418262661C700DBE310 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			package = 9E381418262661C700DBE310 /* RemoteSwiftPackageReference */;
 			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */

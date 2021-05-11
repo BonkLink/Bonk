@@ -82,6 +82,7 @@ struct NewConversationView: View {
                 }
             }
             .disabled(isEmpty)
+            .scaleEffect(1.5)
             .animation(.spring())
             .padding()
             )

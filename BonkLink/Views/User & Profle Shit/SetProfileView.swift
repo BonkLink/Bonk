@@ -50,6 +50,7 @@ struct SetProfileView: View {
             }
         }
         .onAppear { initData() }
+        .scaleEffect(1.5)
         .animation(.interactiveSpring())
 //        .padding()
         .navigationTitle(Text(""))
