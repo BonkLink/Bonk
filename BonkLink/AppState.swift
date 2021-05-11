@@ -14,6 +14,8 @@ class AppState: ObservableObject{
     @Published var error: String?
     @Published var busyCounter = 0
     
+    @Published var showProf = false;
+    
     @Published var loginPublish = PassthroughSubject<RealmSwift.User, Error>()
     @Published var logoutPublish = PassthroughSubject<Void, Error>()
     @Published var userRealmPublish = PassthroughSubject<Realm, Error>()

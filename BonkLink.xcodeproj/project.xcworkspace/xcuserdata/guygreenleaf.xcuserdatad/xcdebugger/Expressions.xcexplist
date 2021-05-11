@@ -3,37 +3,6 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "closure #1 in closure #1 in closure #1 in ContentView.body.getter:ContentView.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "currState">
-            </PersistentString>
-            <PersistentString
-               value = "currState.user">
-            </PersistentString>
-            <PersistentString
-               value = "currState.isUserLoggedIn">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "AppState.isUserLoggedIn.getter:AppState.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "user">
-            </PersistentString>
-            <PersistentString
-               value = "app.currentUser">
-            </PersistentString>
-            <PersistentString
-               value = "app.currentUser?.state">
-            </PersistentString>
-            <PersistentString
-               value = "isUserLoggedIn">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "GLOBAL">
          <PersistentStrings>
             <PersistentString
@@ -42,16 +11,44 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "AppState.isUserLoggedIn.getter:AppState.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "isUserLoggedIn">
+            </PersistentString>
+            <PersistentString
+               value = "app.currentUser">
+            </PersistentString>
+            <PersistentString
+               value = "app.currentUser?.state">
+            </PersistentString>
+            <PersistentString
+               value = "user">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #1 in closure #1 in ContentView.body.getter:ContentView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "currState">
+            </PersistentString>
+            <PersistentString
+               value = "currState.isUserLoggedIn">
+            </PersistentString>
+            <PersistentString
+               value = "currState.user">
+            </PersistentString>
+            <PersistentString
+               value = "currState.user.userName">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "AppState.indicateActivity.setter:AppState.swift">
       </ContextState>
       <ContextState
-         contextName = "Login.login(username:passwd:):Login.swift">
-      </ContextState>
-      <ContextState
          contextName = "ChatInputBox.chatText.setter:ChatInputBox.swift">
-      </ContextState>
-      <ContextState
-         contextName = "ChatInputBox.photo.getter:ChatInputBox.swift">
       </ContextState>
       <ContextState
          contextName = "ChatInputBox.chatText.getter:ChatInputBox.swift">
@@ -60,6 +57,12 @@
                value = "chatText">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ChatInputBox.photo.getter:ChatInputBox.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Login.login(username:passwd:):Login.swift">
       </ContextState>
       <ContextState
          contextName = "closure #1 in Login.body.getter:Login.swift">

@@ -15,7 +15,11 @@ struct ContentView: View {
     //Remind users after 12 hours that they're logged in!
     @AppStorage("remindUserOnline") var remindOnLineUser = false;
     @AppStorage("reminderUserHours") var remindHours = 12.0;
+    
+    
     @State var showProfile = false;
+    
+    
     var action: () -> Void = {}
     
     @State var showNewChat = false;
@@ -40,10 +44,11 @@ struct ContentView: View {
                             }
                             
                         }
+                        else if(currState.showProf){
+                            SetProfileView(isPresented: $showProfile)
+                        }
                         else if(currState.user?.isProfileSet == true){
-                            withAnimation(.easeInOut){
-                                ConversationListView()
-                            }
+                            ConversationListView()
 //                                .background(
 //                                  LinearGradient(gradient: Gradient(colors: [.purple, .gray]), startPoint: .top, endPoint: .bottom))
                             //Text("Logged in with user profile set")
@@ -61,7 +66,7 @@ struct ContentView: View {
                                 } ,
                                 trailing: currState.isUserLoggedIn && !currState.indicateActivity ? UserAvatarView(
                                     photo: currState.user?.userPreferences?.avatarImage,
-                                    online: true) { showProfile.toggle() } : nil
+                                    online: true) { currState.showProf = true } : nil
                             )
                             //LogoutButton();
                                 .navigationBarColor(.black)
