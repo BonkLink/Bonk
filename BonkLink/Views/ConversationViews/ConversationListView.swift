@@ -59,12 +59,12 @@ struct ConversationListView: View {
                         isActive: $showConversation) { EmptyView() }
                         .background(
                           LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .top, endPoint: .bottom))
-                        .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                        .edgesIgnoringSafeArea(.bottom)
                 }
             }
         }
 
-        .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+        .edgesIgnoringSafeArea(.bottom)
 
 
     }

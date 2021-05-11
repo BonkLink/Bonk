@@ -44,9 +44,7 @@ struct ContentView: View {
                             }
                             
                         }
-                        else if(currState.showProf){
-                            SetProfileView(isPresented: $showProfile)
-                        }
+
                         else if(currState.user?.isProfileSet == true){
                             ConversationListView()
 //                                .background(
@@ -66,7 +64,7 @@ struct ContentView: View {
                                 } ,
                                 trailing: currState.isUserLoggedIn && !currState.indicateActivity ? UserAvatarView(
                                     photo: currState.user?.userPreferences?.avatarImage,
-                                    online: true) { currState.showProf = true } : nil
+                                    online: true) { showProfile.toggle() } : nil
                             )
                             //LogoutButton();
                                 .navigationBarColor(.black)
