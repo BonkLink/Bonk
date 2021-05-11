@@ -33,8 +33,9 @@ struct ConversationListView: View {
                         Button(action: {
                             self.conversation = conversation
                             showConversation.toggle()
-                        }) { ConversationCardView(conversation: conversation, isPreview: isPreview)
-                            .animation(.interactiveSpring())
+                        }) { withAnimation(.interpolatingSpring(stiffness: 5, damping: 1)){ ConversationCardView(conversation: conversation, isPreview: isPreview)
+                            .animation(.interactiveSpring())}
+                            .transition(.opacity)
                         }
                     }
                     .listRowBackground(LinearGradient(gradient: Gradient(stops: [Gradient.Stop(color: Color(hue: 0.8756412368222892, saturation: 0.6700248258659639, brightness: 0.8247158556099399, opacity: 1.0), location: 0.05122445913461538), Gradient.Stop(color: Color(hue: 0.9293462914156627, saturation: 0.7479615728539157, brightness: 0.668630576995482, opacity: 0.9545133659638555), location: 0.15966045673076923), Gradient.Stop(color: Color(hue: 0.13326548381024098, saturation: 0.2811264589608434, brightness: 0.7844238281250001, opacity: 1.0), location: 0.5290564903846153), Gradient.Stop(color: Color(hue: 0.6981215879141567, saturation: 0.4372029132153615, brightness: 1.0, opacity: 1.0), location: 0.8149188701923078)]), startPoint: UnitPoint.leading, endPoint: UnitPoint.topTrailing))
@@ -60,6 +61,7 @@ struct ConversationListView: View {
                     .background(
                       LinearGradient(gradient: Gradient(colors: [.black, .gray]), startPoint: .top, endPoint: .bottom))
                     .animation(.easeIn(duration: animationDuration))
+                    .transition(.scale)
             } else {
                 if let user = state.user {
                     NavigationLink(
@@ -69,6 +71,7 @@ struct ConversationListView: View {
                         .background(
                           LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .top, endPoint: .bottom))
                         .animation(.easeIn(duration: animationDuration))
+                        .transition(.scale)
                 }
             }
         }

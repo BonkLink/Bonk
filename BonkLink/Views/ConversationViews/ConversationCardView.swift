@@ -17,9 +17,11 @@ struct ConversationCardView: View {
         VStack {
             if isPreview {
                 ConversationCardContentsView(conversation: conversation)
+                    .transition(.opacity)
             } else {
                 ConversationCardContentsView(conversation: conversation)
                     .environment(\.realmConfiguration, app.currentUser!.configuration(partitionValue: "all-users=all-the-users"))
+                    .transition(.opacity)
             }
         }
         .background(

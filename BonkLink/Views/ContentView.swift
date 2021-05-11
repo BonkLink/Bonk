@@ -41,7 +41,9 @@ struct ContentView: View {
                             
                         }
                         else if(currState.user?.isProfileSet == true){
-                            ConversationListView()
+                            withAnimation(.easeInOut){
+                                ConversationListView()
+                            }
 //                                .background(
 //                                  LinearGradient(gradient: Gradient(colors: [.purple, .gray]), startPoint: .top, endPoint: .bottom))
                             //Text("Logged in with user profile set")
