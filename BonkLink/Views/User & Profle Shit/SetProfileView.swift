@@ -18,12 +18,19 @@ struct SetProfileView: View {
     @State private var photo: Photo?
     @State private var photoAdded = false
     
-    
+    @State private var isLoading = false;
    
+    var navTestView: some View{
+        
+        ProgressView();
+    }
     
     var body: some View {
         Form {
             Section(header: Text("User Profile")) {
+                if isLoading{
+                    navTestView
+                }
                 if let photo = photo {
                     AvatarButton(photo: photo) {
                         self.showPhotoTaker()
@@ -55,7 +62,8 @@ struct SetProfileView: View {
         .navigationTitle(Text(""))
         .navigationBarColor(.black)
         .navigationBarItems(
-            leading: Button(action: { withAnimation(.easeIn){ goBack()} }) {withAnimation(.easeIn){ BackButton()} } .foregroundColor(Color.white)
+            leading:
+                Button(action: { withAnimation(.easeIn){ goBack()} }) {withAnimation(.easeIn){ BackButton()} } .foregroundColor(Color.white)
         ,
             trailing:  LogoutButton()
         )
@@ -64,6 +72,7 @@ struct SetProfileView: View {
     }
     
     func goBack(){
+        isLoading = true;
         isPresented = false;
         state.showProf = false;
         if(state.user?.isProfileSet == true){

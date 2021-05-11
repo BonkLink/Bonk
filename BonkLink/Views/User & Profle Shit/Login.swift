@@ -18,11 +18,22 @@ struct Login: View {
     
     @State var signup = false
     
-    @State private var wasError = false;
+    @State var wasError = false;
+    @State var isLoading = false;
     @State private var wasSignUpError = false;
     
     var body: some View {
         VStack(spacing: 15) {
+            if isLoading{
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                    .scaleEffect(3)
+            }
+            if wasError{
+                Text("Login failed. Please try again.")
+                    .foregroundColor(.white)
+                    .scaleEffect(1)
+            }
             Image("BonkLink_logo2")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
@@ -102,10 +113,10 @@ struct Login: View {
           LinearGradient(gradient: Gradient(colors: [.purple, .pink]), startPoint: .top, endPoint: .bottom))
         .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
         .navigationBarHidden(true)
-        .alert(isPresented: $wasError){
-            Alert(title: Text("Invalid username/password"), message: Text("Please try again"), dismissButton: .default(Text("Got it!")))
-            
-        }
+//        .alert(isPresented: self.$wasError){
+//            Alert(title: Text("Invalid username/password"), message: Text("Please try again"), dismissButton: .default(Text("Got it!")))
+//
+//        }
         .alert(isPresented: $wasSignUpError){
             Alert(title: Text("Username already in use"), message: Text("Please try again"), dismissButton: .default(Text("Got it!")))
             
@@ -116,6 +127,7 @@ struct Login: View {
     
     
     func signupUser(userName: String, passwd: String){
+        self.isLoading = true;
         if userName.isEmpty || passwd.isEmpty{
             self.state.indicateActivity = false
             return
@@ -129,6 +141,7 @@ struct Login: View {
                 case .finished:
                     break
                 case .failure:
+                    self.isLoading = false;
                     self.wasSignUpError = true;
                 }
             }, receiveValue: {
@@ -143,6 +156,8 @@ struct Login: View {
     
     
     func userActionLogin(userName: String, password: String){
+        self.wasError = false;
+        self.isLoading = true;
         self.state.indicateActivity = true;
         login(username: userName, passwd: password)
         
@@ -162,9 +177,12 @@ struct Login: View {
                 self.state.indicateActivity = false
                 switch $0{
                 case .finished:
+                    
                     break
                 case .failure:
+                    self.isLoading = false;
                     self.wasError = true;
+                    print("toggled")
                 }
             }, receiveValue: {
                 self.state.error = nil

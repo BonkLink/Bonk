@@ -37,7 +37,7 @@ struct MapView: View {
         .animation(.easeIn)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: Button(action: { self.presentationMode.wrappedValue.dismiss() }) {
-            BackButton(label: "Dismiss")
+            BackButton(label: "Dismiss").foregroundColor(.black)
         })
         .onAppear(perform: setupLocation)
     }
