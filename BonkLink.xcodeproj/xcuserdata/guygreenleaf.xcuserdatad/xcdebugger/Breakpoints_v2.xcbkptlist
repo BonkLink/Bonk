@@ -174,8 +174,8 @@
             filePath = "BonkLink/Views/User &amp; Profle Shit/Login.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -237,8 +237,8 @@
             filePath = "BonkLink/Views/User &amp; Profle Shit/Login.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -285,10 +285,10 @@
             filePath = "BonkLink/Views/User &amp; Profle Shit/Login.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
-            landmarkName = "userActionLogin(userName:password:)"
-            landmarkType = "7">
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "Login"
+            landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -539,8 +539,8 @@
             filePath = "BonkLink/Views/User &amp; Profle Shit/SetProfileView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "saveProfile()"
             landmarkType = "7">
          </BreakpointContent>
@@ -555,6 +555,8 @@
             filePath = "BonkLink/Views/User &amp; Profle Shit/SetProfileView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             startingLineNumber = "89"
             endingLineNumber = "89"
             landmarkName = "saveProfile()"
@@ -571,10 +573,10 @@
             filePath = "BonkLink/Views/ConversationViews/NewConversationView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "searchUsers()"
-            landmarkType = "7">
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "body"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -603,8 +605,8 @@
             filePath = "BonkLink/Views/ChatViews/ChatInputBox.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "sendChat()"
             landmarkType = "7">
          </BreakpointContent>
@@ -619,6 +621,8 @@
             filePath = "BonkLink/Views/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             startingLineNumber = "47"
             endingLineNumber = "47"
             landmarkName = "body"
@@ -635,8 +639,8 @@
             filePath = "BonkLink/Views/ChatViews/ChatInputBox.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "sendMessage(text:photo:location:)"
             landmarkType = "7">
          </BreakpointContent>

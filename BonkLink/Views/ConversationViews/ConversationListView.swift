@@ -35,32 +35,35 @@ struct ConversationListView: View {
                             showConversation.toggle()
                         }) { ConversationCardView(conversation: conversation, isPreview: isPreview) }
                     }
+                    .listRowBackground(LinearGradient(gradient: Gradient(stops: [Gradient.Stop(color: Color(hue: 0.8756412368222892, saturation: 0.6700248258659639, brightness: 0.8247158556099399, opacity: 1.0), location: 0.05122445913461538), Gradient.Stop(color: Color(hue: 0.9293462914156627, saturation: 0.7479615728539157, brightness: 0.668630576995482, opacity: 0.9545133659638555), location: 0.15966045673076923), Gradient.Stop(color: Color(hue: 0.13326548381024098, saturation: 0.2811264589608434, brightness: 0.7844238281250001, opacity: 1.0), location: 0.5290564903846153), Gradient.Stop(color: Color(hue: 0.6981215879141567, saturation: 0.4372029132153615, brightness: 1.0, opacity: 1.0), location: 0.8149188701923078)]), startPoint: UnitPoint.leading, endPoint: UnitPoint.topTrailing))
+
                 }
                 .animation(.easeIn(duration: animationDuration))
-                Button(action: { showingAddChat.toggle() }) {
-                    Text("New Chat Room")
-                }
-                .disabled(showingAddChat)
+
             }
-            Spacer()
+           
             if isPreview {
                 NavigationLink(
                     destination: ChatRoomView(conversation: conversation),
                     isActive: $showConversation) { EmptyView() }
+                    .background(
+                      LinearGradient(gradient: Gradient(colors: [.black, .gray]), startPoint: .top, endPoint: .bottom))
             } else {
                 if let user = state.user {
                     NavigationLink(
                         destination: ChatRoomView(conversation: conversation)
                             .environment(\.realmConfiguration, app.currentUser!.configuration(partitionValue: "user=\(user._id)")),
                         isActive: $showConversation) { EmptyView() }
+                        .background(
+                          LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .top, endPoint: .bottom))
+                        .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                 }
             }
         }
-        .sheet(isPresented: $showingAddChat) {
-            NewConversationView()
-                .environmentObject(state)
-                .environment(\.realmConfiguration, app.currentUser!.configuration(partitionValue: "all-users=all-the-users"))
-        }
+
+        .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+
+
     }
 }
 
@@ -69,3 +72,19 @@ struct ConversationListView_Previews: PreviewProvider {
         ConversationListView()
     }
 }
+
+
+//Curious how I generated that linear gradient? Check out this utility for creating gradients!
+//  https://apps.apple.com/us/app/gradient-maker/id1528484462?mt=12
+
+struct BlueButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .padding()
+            .background(LinearGradient(gradient: Gradient(stops: [Gradient.Stop(color: Color(hue: 0.6071600856551206, saturation: 1.0, brightness: 0.8, opacity: 1.0), location: 0.0), Gradient.Stop(color: Color(hue: 0.4552134318524097, saturation: 1.0, brightness: 0.8, opacity: 0.9545133659638555), location: 0.07780198317307692), Gradient.Stop(color: Color(hue: 0.5591732163027109, saturation: 0.6641213290662651, brightness: 0.8043227597891567, opacity: 1.0), location: 0.3454477163461539)]), startPoint: UnitPoint.topLeading, endPoint: UnitPoint.bottomTrailing))
+            .foregroundColor(.white)
+            .clipShape(Capsule())
+    }
+}
+
+

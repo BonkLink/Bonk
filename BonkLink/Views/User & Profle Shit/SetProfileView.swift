@@ -14,10 +14,12 @@ struct SetProfileView: View {
     
     @Binding var isPresented: Bool
 
-    
     @State private var displayName = ""
     @State private var photo: Photo?
     @State private var photoAdded = false
+    
+    
+   
     
     var body: some View {
         Form {
@@ -48,18 +50,21 @@ struct SetProfileView: View {
             }
         }
         .onAppear { initData() }
-        .padding()
-     
+        .animation(.interactiveSpring())
+//        .padding()
+        .navigationTitle(Text(""))
+        .navigationBarColor(.black)
         .navigationBarItems(
-            leading: Button(action: { goBack() }) { BackButton() }
+            leading: Button(action: { goBack() }) { BackButton() } .foregroundColor(Color.white)
         ,
             trailing:  LogoutButton()
         )
-        .navigationBarHidden(!state.isUserLoggedIn)
+        
+//        .navigationBarHidden(!state.isUserLoggedIn)
     }
     
     func goBack(){
-        state.showProf = false;
+        isPresented = false;
         if(state.user?.isProfileSet == true){
             print("SET!")
         }
@@ -103,12 +108,19 @@ struct SetProfileView: View {
     }
 }
 
+
+
 struct SetProfileView_Previews: PreviewProvider {
     static var previews: some View {
 //        let previewState: AppState = .sample
         return AppearancePreviews(
             NavigationView {
+                ZStack{
+                    Color.red.edgesIgnoringSafeArea(.all)
+                }
                 SetProfileView(isPresented: .constant(true))
+                .navigationBarColor(UIColor.black)
+                    .navigationBarColor(.black)
             }
         )
 //        .environmentObject(previewState)

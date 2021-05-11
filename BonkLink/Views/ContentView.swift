@@ -22,57 +22,70 @@ struct ContentView: View {
     
     var action: () -> Void = {}
     
+    @State var showNewChat = false;
     
+    
+
     var body: some View {
+        ZStack{
         NavigationView{
-            ZStack{
+            
+                
                 VStack{
                     if currState.isUserLoggedIn {
-//                        HStack{
-//                        Text("LOGGED")
-//                        LogoutButton()
-//                        }
-//
-                    
+                        if(currState.user?.userName != nil) && (!currState.user!.isProfileSet || showProfile){
+                            
+                            
+                            withAnimation(.interpolatingSpring(stiffness: 5, damping: 1)) {
+                                SetProfileView(isPresented: $showProfile)
+                                   .environment(\.realmConfiguration,
+                                               app.currentUser!.configuration(partitionValue: "user=\(currState.user?._id ?? "")"))
                         
-                        if(!currState.user!.isProfileSet){
-                            SetProfileView(isPresented: $showProfile)
-                               .environment(\.realmConfiguration,
-                                           app.currentUser!.configuration(partitionValue: "user=\(currState.user?._id ?? "")"))
+                            }
+                            
                         }
                         else if(currState.showProf){
                             SetProfileView(isPresented: $showProfile)
                         }
                         else if(currState.user?.isProfileSet == true){
                             ConversationListView()
+//                                .background(
+//                                  LinearGradient(gradient: Gradient(colors: [.purple, .gray]), startPoint: .top, endPoint: .bottom))
                             //Text("Logged in with user profile set")
                                 .environment(\.realmConfiguration, app.currentUser!.configuration(partitionValue: "user=\(currState.user?._id ?? "")"))
                             .navigationBarTitle("Chats", displayMode: .inline)
                             .navigationBarItems(
+                                leading: Button("New Chat") {
+                                    self.showNewChat.toggle()
+                                }.sheet(isPresented: $showNewChat){
+                                                NewConversationView()
+                                                    .environmentObject(currState)
+                                                    .environment(\.realmConfiguration, app.currentUser!.configuration(partitionValue: "all-users=all-the-users"))
+                                                    .background(
+                                                      LinearGradient(gradient: Gradient(colors: [.black, .gray]), startPoint: .top, endPoint: .bottom))
+                                } ,
                                 trailing: currState.isUserLoggedIn && !currState.indicateActivity ? UserAvatarView(
                                     photo: currState.user?.userPreferences?.avatarImage,
                                     online: true) { currState.showProf = true } : nil
                             )
                             //LogoutButton();
-
+                                .navigationBarColor(.black)
                         }
                     }
                     //otherwise, user isn't logged in
                     else{
-   
                     Login()
                     }
                     if let error = currState.error {
                               Text("Error: \(error)")
                                   .foregroundColor(Color.red)
                     }
-                    
                 }
-
-
-            }
-            
+           
+            //.navigationBarColor(UIColor.black)
         }
+        
+      
         .currentDeviceNavigationViewStyle(alwaysStacked: !currState.isUserLoggedIn )
 
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)){ _ in
@@ -86,9 +99,13 @@ struct ContentView: View {
         .onReceive(NotificationCenter.default.publisher(for:UIApplication.willEnterForegroundNotification)){ _ in
             //Clear notifications here!
         }
+        }
+
+        
+        
     }
-    
 }
+
 
 //addNotification() function
 //clearNotificiation() function

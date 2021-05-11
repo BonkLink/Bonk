@@ -37,8 +37,8 @@ struct ChatBubbleView: View {
                         }
                     }
                     Spacer()
-                    Text(chatMessage.timestamp, style: isLessThanOneDay ?  .time : .date)
-                        .font(.caption)
+//                    Text(chatMessage.timestamp, style: isLessThanOneDay ?  .time : .date)
+//                        .font(.caption)
                 }
                 HStack {
                     if let photo = chatMessage.image {
@@ -56,10 +56,12 @@ struct ChatBubbleView: View {
                         .padding(Dimensions.padding)
                     }
                     Spacer()
+                    Text(chatMessage.timestamp, style: isLessThanOneDay ?  .time : .date)
+                        .font(.caption)
                 }
             }
             .padding(Dimensions.padding)
-            .background(isMyMessage ? Color.blue.opacity(0.7) : Color.gray.opacity(0.7))
+            .background(isMyMessage ? Color("mymessage") : Color("othermessage"))
             //.background(Color(isMyMessage ? "MyBubble" : "OtherBubble"))
             .clipShape(RoundedRectangle(cornerRadius: Dimensions.cornerRadius))
             if !isMyMessage { Spacer().frame(width: Dimensions.horizontalOffset) }

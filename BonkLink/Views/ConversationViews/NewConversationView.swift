@@ -36,6 +36,7 @@ struct NewConversationView: View {
         
         return NavigationView {
             ZStack {
+                //Color.black.edgesIgnoringSafeArea(.all)
                 VStack {
                     InputField(title: "Chat Name", text: $name)
                     CaptionLabel(title: "Add Members")
@@ -60,6 +61,7 @@ struct NewConversationView: View {
                         }
                         .onDelete(perform: deleteMember)
                     }
+                
                     Spacer()
                 }
                 Spacer()
@@ -83,8 +85,12 @@ struct NewConversationView: View {
             .disabled(isEmpty)
             .padding()
             )
+            .navigationBarColor(UIColor.black)
         }
         .onAppear(perform: searchUsers)
+        .background(
+          LinearGradient(gradient: Gradient(colors: [.purple, .pink]), startPoint: .top, endPoint: .bottom))
+        .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
     }
     
     private func searchUsers() {

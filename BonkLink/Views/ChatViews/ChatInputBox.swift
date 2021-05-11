@@ -18,7 +18,7 @@ struct ChatInputBox: View {
     
     private enum Dimensions {
         static let maxHeight: CGFloat = 100
-        static let minHeight: CGFloat = 100
+        static let minHeight: CGFloat = 75
         static let radius: CGFloat = 10
         static let imageSize: CGFloat = 70
         static let padding: CGFloat = 15
@@ -44,7 +44,7 @@ struct ChatInputBox: View {
                     .onTapGesture(perform: focusAction)
                     .padding(Dimensions.padding)
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: Dimensions.minHeight, maxHeight: Dimensions.maxHeight)
-                    .background(Color.gray.opacity(0.5))
+                    .background(Color.white)
                     .clipShape(RoundedRectangle(cornerRadius: Dimensions.radius))
             }
             HStack {
@@ -56,8 +56,11 @@ struct ChatInputBox: View {
             }
             .frame(height: Dimensions.toolStripHeight)
         }
-        .padding(Dimensions.padding)
+        .frame(height: .infinity)
+        .edgesIgnoringSafeArea(.all)
+//        .padding(Dimensions.padding)
         .onAppear(perform: { clearBackground() })
+        
     }
     
     private func addLocation() {

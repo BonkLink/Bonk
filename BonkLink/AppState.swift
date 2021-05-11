@@ -21,6 +21,9 @@ class AppState: ObservableObject{
     @Published var userRealmPublish = PassthroughSubject<Realm, Error>()
     @Published var cancellable = Set<AnyCancellable>()
     
+   
+    
+    
     var indicateActivity:Bool{
         get{
             return busyCounter > 0

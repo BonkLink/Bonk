@@ -17,6 +17,8 @@ struct ChatRoomView: View {
     let padding: CGFloat = 8
     
     var body: some View {
+        //NavigationView{
+            //ZStack{
         VStack {
             if let conversation = conversation {
                 if isPreview {
@@ -26,12 +28,19 @@ struct ChatRoomView: View {
                         .environment(\.realmConfiguration, app.currentUser!.configuration(partitionValue: "conversation=\(conversation.id)"))
                 }
             }
-            Spacer()
-        }
+           
+        }//}
         .navigationBarTitle(conversation?.displayName ?? "Chat", displayMode: .inline)
         .padding(.horizontal, padding)
+        .padding(.bottom)
         .onAppear(perform: clearUnreadCount)
         .onDisappear(perform: clearUnreadCount)
+        .navigationBarColor(UIColor.black)
+        .frame(maxHeight: .infinity)
+        .background(
+          LinearGradient(gradient: Gradient(colors: [.black, .gray]), startPoint: .top, endPoint: .bottom))
+        .edgesIgnoringSafeArea(.bottom)
+        //}
     }
     
     private func clearUnreadCount() {
