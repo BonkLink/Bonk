@@ -30,11 +30,15 @@ struct ChatRoomView: View {
         }
         .navigationBarTitle(conversation?.displayName ?? "Chat", displayMode: .inline)
         .padding(.horizontal, padding)
+        .padding(.bottom)
         .onAppear(perform: clearUnreadCount)
         .onDisappear(perform: clearUnreadCount)
         .navigationBarColor(UIColor.black)
+        .frame(maxHeight: .infinity)
         .background(
           LinearGradient(gradient: Gradient(colors: [.black, .gray]), startPoint: .top, endPoint: .bottom))
+        .edgesIgnoringSafeArea(.bottom)
+        //}
     }
     
     private func clearUnreadCount() {

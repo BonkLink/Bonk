@@ -21,11 +21,12 @@ struct ContentView: View {
     @State var showNewChat = false;
     
     
-    
+
     var body: some View {
+        ZStack{
         NavigationView{
-            ZStack{
-                //Color.black.edgesIgnoringSafeArea(.all)
+            
+                
                 VStack{
                     if currState.isUserLoggedIn {
                         if(currState.user?.userName != nil) && (!currState.user!.isProfileSet || showProfile){
@@ -73,9 +74,11 @@ struct ContentView: View {
                                   .foregroundColor(Color.red)
                     }
                 }
-            }
+           
             //.navigationBarColor(UIColor.black)
         }
+        
+      
         .currentDeviceNavigationViewStyle(alwaysStacked: !currState.isUserLoggedIn )
 
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)){ _ in
@@ -89,6 +92,10 @@ struct ContentView: View {
         .onReceive(NotificationCenter.default.publisher(for:UIApplication.willEnterForegroundNotification)){ _ in
             //Clear notifications here!
         }
+        }
+
+        
+        
     }
 }
 

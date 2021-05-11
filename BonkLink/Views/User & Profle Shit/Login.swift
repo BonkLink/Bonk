@@ -18,7 +18,8 @@ struct Login: View {
     
     @State var signup = false
     
-    
+    @State private var wasError = false;
+    @State private var wasSignUpError = false;
     
     var body: some View {
         VStack(spacing: 15) {
@@ -101,12 +102,16 @@ struct Login: View {
           LinearGradient(gradient: Gradient(colors: [.purple, .pink]), startPoint: .top, endPoint: .bottom))
         .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
         .navigationBarHidden(true)
-
-//        if signup {
-//            Text("YEP!")
-//                .transition(.slide)
-//        }
+        .alert(isPresented: $wasError){
+            Alert(title: Text("Invalid username/password"), message: Text("Please try again"), dismissButton: .default(Text("Got it!")))
+            
         }
+        .alert(isPresented: $wasSignUpError){
+            Alert(title: Text("Username already in use"), message: Text("Please try again"), dismissButton: .default(Text("Got it!")))
+            
+        }
+
+    }
     
     
     
@@ -123,8 +128,8 @@ struct Login: View {
                 switch $0 {
                 case .finished:
                     break
-                case .failure(let error):
-                    self.state.error = error.localizedDescription
+                case .failure:
+                    self.wasSignUpError = true;
                 }
             }, receiveValue: {
                 self.state.error = nil
@@ -158,8 +163,8 @@ struct Login: View {
                 switch $0{
                 case .finished:
                     break
-                case .failure(let error):
-                    self.state.error = error.localizedDescription
+                case .failure:
+                    self.wasError = true;
                 }
             }, receiveValue: {
                 self.state.error = nil

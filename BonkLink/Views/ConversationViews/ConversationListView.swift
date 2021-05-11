@@ -52,7 +52,7 @@ struct ConversationListView: View {
                 .animation(.easeIn(duration: animationDuration))
 
             }
-            Spacer()
+           
             if isPreview {
                 NavigationLink(
                     destination: ChatRoomView(conversation: conversation),
