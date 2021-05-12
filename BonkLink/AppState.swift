@@ -5,6 +5,11 @@
 //  Created by Guy Greenleaf on 4/13/21.
 //
 
+
+
+//This is the "boiler plate" code for setting up a Realm instance
+
+
 import RealmSwift
 import SwiftUI
 import Combine
@@ -22,8 +27,6 @@ class AppState: ObservableObject{
     @Published var cancellable = Set<AnyCancellable>()
     
    
-    
-    
     var indicateActivity:Bool{
         get{
             return busyCounter > 0
@@ -34,6 +37,10 @@ class AppState: ObservableObject{
         }
     }
     }
+    
+    
+    
+    
     @Published var chatterRealm: Realm?
     @Published var userRealm: Realm?
     @Published var user: Users?

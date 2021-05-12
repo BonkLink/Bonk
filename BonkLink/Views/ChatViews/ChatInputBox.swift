@@ -56,9 +56,9 @@ struct ChatInputBox: View {
             }
             .frame(height: Dimensions.toolStripHeight)
         }
-        .frame(height: .infinity)
+        
         .edgesIgnoringSafeArea(.all)
-//        .padding(Dimensions.padding)
+
         .onAppear(perform: { clearBackground() })
         
     }
@@ -110,11 +110,4 @@ struct ChatInputBox: View {
             send(chatMessage)
     }
     
-}
-
-struct ChatInputBox_Previews: PreviewProvider {
-    static var previews: some View {
-        //ChatInputBox()
-        Text("needs to be fixed")
-    }
 }

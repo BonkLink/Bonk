@@ -2,8 +2,9 @@
 //  SetProfileView.swift
 //  RChat
 //
-//  Created by Jacques Sarraffe on 4/20/420.//
-import UIKit
+//  Created by Jacques Sarraffe on 4/20/21
+
+
 import SwiftUI
 import RealmSwift
 
@@ -28,9 +29,6 @@ struct SetProfileView: View {
     var body: some View {
         Form {
             Section(header: Text("User Profile")) {
-                if isLoading{
-                    navTestView
-                }
                 if let photo = photo {
                     AvatarButton(photo: photo) {
                         self.showPhotoTaker()
@@ -41,7 +39,7 @@ struct SetProfileView: View {
                         Text("Add Photo")
                     }
                 }
-                InputField(title: "Display Name", text: $displayName)
+                InputField(title: "Display Name", text: $displayName) .autocapitalization(.none)
                 CallToActionButton(title: "Save User Profile", action: saveProfile)
             }
             Section(header: Text("Device Settings")) {
@@ -58,7 +56,6 @@ struct SetProfileView: View {
         }
         .onAppear { initData() }
         .animation(.interactiveSpring())
-//        .padding()
         .navigationTitle(Text(""))
         .navigationBarColor(.black)
         .navigationBarItems(
@@ -68,7 +65,7 @@ struct SetProfileView: View {
             trailing:  LogoutButton()
         )
         
-//        .navigationBarHidden(!state.isUserLoggedIn)
+
     }
     
     func goBack(){
@@ -100,8 +97,7 @@ struct SetProfileView: View {
                     state.user?.userPreferences?.avatarImage = newPhoto
                 }
                 state.user?.presenceState = .onLine
-                
-                print(state.user?.isProfileSet)
+       
             }
         } catch {
             state.error = "Unable to open Realm write transaction"
@@ -120,21 +116,21 @@ struct SetProfileView: View {
 
 
 
-struct SetProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-//        let previewState: AppState = .sample
-        return AppearancePreviews(
-            NavigationView {
-                ZStack{
-                    Color.red.edgesIgnoringSafeArea(.all)
-                }
-                SetProfileView(isPresented: .constant(true))
-                .navigationBarColor(UIColor.black)
-                    .navigationBarColor(.black)
-            }
-        )
-//        .environmentObject(previewState)
-    }
-}
+//struct SetProfileView_Previews: PreviewProvider {
+//    static var previews: some View {
+////        let previewState: AppState = .sample
+//        return AppearancePreviews(
+//            NavigationView {
+//                ZStack{
+//                    Color.red.edgesIgnoringSafeArea(.all)
+//                }
+//                SetProfileView(isPresented: .constant(true))
+//                .navigationBarColor(UIColor.black)
+//                    .navigationBarColor(.black)
+//            }
+//        )
+////        .environmentObject(previewState)
+//    }
+//}
 
 

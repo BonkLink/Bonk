@@ -260,7 +260,7 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		9E057CE4263373850088C79F /* User & Profle Shit */ = {
+		9E057CE4263373850088C79F /* User Profile */ = {
 			isa = PBXGroup;
 			children = (
 				9E057CE5263373850088C79F /* SetProfileView.swift */,
@@ -270,7 +270,7 @@
 				9E057CE9263373850088C79F /* OnlineAlertSettings.swift */,
 				9E057CEA263373850088C79F /* UserProfileButton.swift */,
 			);
-			path = "User & Profle Shit";
+			path = "User Profile";
 			sourceTree = "<group>";
 		};
 		9E3813FC26265D0600DBE310 = {
@@ -322,7 +322,7 @@
 				3F52DE342639D16E00D94AB8 /* ChatViews */,
 				9E057CE3263373850088C79F /* ContentView.swift */,
 				3F52DE352639D1D900D94AB8 /* ConversationViews */,
-				9E057CE4263373850088C79F /* User & Profle Shit */,
+				9E057CE4263373850088C79F /* User Profile */,
 				3F52DE362639D5FB00D94AB8 /* OtherStuff */,
 				3F52DE9D2645C03500D94AB8 /* NavigationBarModifier.swift */,
 			);

@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct BackButton: View {
-    var label: String = "Back"
+    var label: String = "Chats"
     
     private let spacing: CGFloat = 8
     

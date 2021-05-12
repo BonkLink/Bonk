@@ -47,10 +47,10 @@ struct SaveConversationButton: View {
         done()
     }
 }
-
-struct SaveConversationButton_Previews: PreviewProvider {
-    static var previews: some View {
-        //SaveConversationButton(name: <#String#>, members: <#[String]#>)
-        Text("needs to be fixed")
-    }
-}
+//
+//struct SaveConversationButton_Previews: PreviewProvider {
+//    static var previews: some View {
+//        //SaveConversationButton(name: <#String#>, members: <#[String]#>)
+//        Text("needs to be fixed")
+//    }
+//}

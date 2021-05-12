@@ -2,8 +2,10 @@
 //  OnlineAlertSettings.swift
 //  RChat
 //
-//  Created by Andrew Morgan on 25/11/2020.
+//  Created by Jacques Sarraffe on 4/20/21
 //
+
+
 import SwiftUI
 import UserNotifications
 
@@ -40,12 +42,12 @@ struct OnlineAlertSettings: View {
     }
 }
 
-struct OnlineAlertSettings_Previews: PreviewProvider {
-    static var previews: some View {
-        AppearancePreviews(
-            OnlineAlertSettings()
-        )
-        .padding()
-        .previewLayout(.sizeThatFits)
-    }
-}
+//struct OnlineAlertSettings_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AppearancePreviews(
+//            OnlineAlertSettings()
+//        )
+//        .padding()
+//        .previewLayout(.sizeThatFits)
+//    }
+//}

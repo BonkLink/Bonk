@@ -2,7 +2,9 @@
 //  LogoutButton.swift
 //  RChat
 //
-//  Created by Jacques Sarraffe on 4/20/420.//
+//  Created by Jacques Sarraffe on 4/20/21
+
+
 import RealmSwift
 import SwiftUI
 

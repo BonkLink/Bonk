@@ -20,8 +20,10 @@ struct ChatRoomView: View {
         VStack {
             if let conversation = conversation {
                 if isPreview {
+                    Spacer()
                     ChatRoomBubblesView(conversation: conversation, isPreview: isPreview)
                 } else {
+                    Spacer()
                     ChatRoomBubblesView(conversation: conversation)
                         .environment(\.realmConfiguration, app.currentUser!.configuration(partitionValue: "conversation=\(conversation.id)"))
                 }
@@ -36,9 +38,9 @@ struct ChatRoomView: View {
         .navigationBarColor(UIColor.black)
         .frame(maxHeight: .infinity)
         .background(
-          LinearGradient(gradient: Gradient(colors: [.black, .gray]), startPoint: .top, endPoint: .bottom))
+          LinearGradient(gradient: Gradient(stops: [Gradient.Stop(color: Color(hue: 0.48528685052710846, saturation: 0.5224903520331325, brightness: 0.9699383471385543, opacity: 1.0), location: 0.1349308894230769), Gradient.Stop(color: Color(hue: 0.8, saturation: 0.3008665521460844, brightness: 0.9866781579442772, opacity: 1.0), location: 0.38061147836538467), Gradient.Stop(color: Color(hue: 0.5184223221009037, saturation: 1.0, brightness: 0.8, opacity: 1.0), location: 0.7052584134615385)]), startPoint: UnitPoint.topLeading, endPoint: UnitPoint.bottomTrailing))
         .edgesIgnoringSafeArea(.bottom)
-        //}
+       
     }
     
     private func clearUnreadCount() {

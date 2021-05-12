@@ -50,9 +50,9 @@ struct ConversationCardContentsView: View {
     }
 }
 
-struct ConversationCardContentsView_Previews: PreviewProvider {
-    static var previews: some View {
-//        ConversationCardContentsView(conversation: <#Conversation#>)
-        Text("needs to be fixed")
-    }
-}
+//struct ConversationCardContentsView_Previews: PreviewProvider {
+//    static var previews: some View {
+////        ConversationCardContentsView(conversation: <#Conversation#>)
+//        Text("needs to be fixed")
+//    }
+//}

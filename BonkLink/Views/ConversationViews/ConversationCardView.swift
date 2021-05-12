@@ -24,18 +24,16 @@ struct ConversationCardView: View {
                     .transition(.opacity)
             }
         }
-//        .background(
-//          LinearGradient(gradient: Gradient(colors: [.purple, .blue]), startPoint: .top, endPoint: .bottom))
-        .background(Color.black)
+.background(Color.black)
         .opacity(0.9)
         .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
         .border(Color.black, width: 1)
     }
 }
 
-struct ConversationCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        //ConversationCardView()
-        Text("Needs to be fixed")
-    }
-}
+//struct ConversationCardView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        //ConversationCardView()
+//        Text("Needs to be fixed")
+//    }
+//}

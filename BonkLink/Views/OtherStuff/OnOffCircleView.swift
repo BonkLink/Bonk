@@ -5,12 +5,7 @@
 //  Created by Jacques Sarraffe on 4/25/21.
 //
 
-//
-//  OnOffCircleView.swift
-//  RChat
-//
-//  Created by Andrew Morgan on 24/11/2020.
-//
+
 import SwiftUI
 
 struct OnOffCircleView: View {

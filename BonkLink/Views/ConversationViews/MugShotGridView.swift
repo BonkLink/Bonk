@@ -34,9 +34,9 @@ struct MugShotGridView: View {
     }
 }
 
-struct MugShotGridView_Previews: PreviewProvider {
-    static var previews: some View {
-        //MugShotGridView(members: <#T##[Chatter]#>)
-        Text("Needs to be fixed")
-    }
-}
+//struct MugShotGridView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        //MugShotGridView(members: <#T##[Chatter]#>)
+//        Text("Needs to be fixed")
+//    }
+//}

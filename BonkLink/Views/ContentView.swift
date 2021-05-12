@@ -25,31 +25,27 @@ struct ContentView: View {
     @State var showNewChat = false;
     
     
-
     var body: some View {
         ZStack{
+            
         NavigationView{
             
-                
                 VStack{
+                    
                     if currState.isUserLoggedIn {
-                        if(currState.user?.userName != nil) && (!currState.user!.isProfileSet || showProfile){
-                            
+                        if(currState.user!.userPreferences?.displayName == "" || showProfile){
                             
                             withAnimation(.interpolatingSpring(stiffness: 5, damping: 1)) {
                                 SetProfileView(isPresented: $showProfile)
                                    .environment(\.realmConfiguration,
                                                app.currentUser!.configuration(partitionValue: "user=\(currState.user?._id ?? "")"))
-                        
                             }
                             
                         }
 
                         else if(currState.user?.isProfileSet == true){
                             ConversationListView()
-//                                .background(
-//                                  LinearGradient(gradient: Gradient(colors: [.purple, .gray]), startPoint: .top, endPoint: .bottom))
-                            //Text("Logged in with user profile set")
+
                                 .environment(\.realmConfiguration, app.currentUser!.configuration(partitionValue: "user=\(currState.user?._id ?? "")"))
                             .navigationBarTitle("Chats", displayMode: .inline)
                             .navigationBarItems(
@@ -66,11 +62,11 @@ struct ContentView: View {
                                     photo: currState.user?.userPreferences?.avatarImage,
                                     online: true) { showProfile.toggle() } : nil
                             )
-                            //LogoutButton();
+             
                                 .navigationBarColor(.black)
                         }
                     }
-                    //otherwise, user isn't logged in
+             
                     else{
                     Login()
                     }
@@ -79,34 +75,16 @@ struct ContentView: View {
                                   .foregroundColor(Color.red)
                     }
                 }
-           
-            //.navigationBarColor(UIColor.black)
-        }
-        
       
-        .currentDeviceNavigationViewStyle(alwaysStacked: !currState.isUserLoggedIn )
-
-        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)){ _ in
-            if let user = currState.user{
-                if user.presenceState == .onLine && remindOnLineUser{
-                    //Send Notification here!
-                }
-            }
-            
         }
-        .onReceive(NotificationCenter.default.publisher(for:UIApplication.willEnterForegroundNotification)){ _ in
-            //Clear notifications here!
-        }
-        }
-
         
+        .currentDeviceNavigationViewStyle(alwaysStacked: !currState.isUserLoggedIn )
+        }
         
     }
 }
 
 
-//addNotification() function
-//clearNotificiation() function
 
 extension View {
     public func currentDeviceNavigationViewStyle(alwaysStacked: Bool) -> AnyView {

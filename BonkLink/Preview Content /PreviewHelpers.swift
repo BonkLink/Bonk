@@ -3,7 +3,7 @@
 //  PreviewHelpers.swift
 //  RChat
 //
-//  Created by Jacques Sarraffe on 4/20/420.//
+//  Created by Jacques Sarraffe on 4/20/21
 import SwiftUI
 
 struct AppearancePreviews<Value: View>: View {

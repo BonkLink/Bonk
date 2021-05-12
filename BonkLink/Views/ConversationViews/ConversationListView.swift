@@ -77,17 +77,5 @@ struct ConversationListView_Previews: PreviewProvider {
 }
 
 
-//Curious how I generated that linear gradient? Check out this utility for creating gradients!
-//  https://apps.apple.com/us/app/gradient-maker/id1528484462?mt=12
-
-struct BlueButton: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .padding()
-            .background(LinearGradient(gradient: Gradient(stops: [Gradient.Stop(color: Color(hue: 0.6071600856551206, saturation: 1.0, brightness: 0.8, opacity: 1.0), location: 0.0), Gradient.Stop(color: Color(hue: 0.4552134318524097, saturation: 1.0, brightness: 0.8, opacity: 0.9545133659638555), location: 0.07780198317307692), Gradient.Stop(color: Color(hue: 0.5591732163027109, saturation: 0.6641213290662651, brightness: 0.8043227597891567, opacity: 1.0), location: 0.3454477163461539)]), startPoint: UnitPoint.topLeading, endPoint: UnitPoint.bottomTrailing))
-            .foregroundColor(.white)
-            .clipShape(Capsule())
-    }
-}
 
 

@@ -3,7 +3,7 @@
 //  AvatarButton.swift
 //  RChat
 //
-//  Created by Andrew Morgan on 24/11/2020.
+// Created by Jacques Sarraffe on 4/20/21
 //
 import SwiftUI
 

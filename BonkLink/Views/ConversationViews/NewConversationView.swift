@@ -125,8 +125,8 @@ struct NewConversationView: View {
     }
 }
 
-struct NewConversationView_Previews: PreviewProvider {
-    static var previews: some View {
-        NewConversationView()
-    }
-}
+//struct NewConversationView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NewConversationView()
+//    }
+//}
