@@ -5,6 +5,14 @@
 //  Created by Guy Greenleaf on 4/13/21.
 //
 
+
+//Project Members:
+//Brent Dunbar
+//Guy Greenleaf
+//Jacques Sarraffe
+//Jessica Wood
+
+
 //Entry point of the app
 
 
