@@ -1,8 +1,8 @@
 BonkLink
 
-Brent Dunbar
-Guy Greenleaf
-Jacques Sarraffe
+Brent Dunbar, 
+Guy Greenleaf, 
+Jacques Sarraffe, 
 Jessica Wood
 
 A modern-day chat application that uses the serverless database Realm as an architecture and implements a number of features including instant messaging via text, photo, and other media.  The app also gives the user the ability to share their location as well as set reminders to ping their mobile device at a set time interval between 1 and 24 hours.
